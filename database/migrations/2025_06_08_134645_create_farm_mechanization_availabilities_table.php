@@ -1,0 +1,33 @@
+<?php
+
+use App\Models\User;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('farm_mechanization_availabilities', function (Blueprint $table) {
+            $table->id();
+            $table->string('code');
+            $table->string('day_name');
+            $table->time('time_from')->nullable();
+            $table->time('time_to')->nullable();
+            $table->foreignIdFor(User::class)->index();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('farm_mechanization_availabilities');
+    }
+};
