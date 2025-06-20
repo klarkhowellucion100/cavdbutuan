@@ -524,7 +524,8 @@
                                         Unit for the procedure.
                                         <br>
                                         <span class="text-primary fw-bold" style="font-weight:bold;">
-                                            - Human ma-validate ang imong mga dokumento, padayon sa Plant and Animal
+                                            - Human ma-validate ang imong mga dokumento, pwede na dayun ta mupadayon sa
+                                            Plant and Animal
                                             Health Unit alang sa maong proseso.
                                         </span>
                                     </span>
