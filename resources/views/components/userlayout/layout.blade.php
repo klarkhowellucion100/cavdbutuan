@@ -7,7 +7,7 @@
     <title>| CAVD Butuan</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url('frontend/guestlayout/images/cavd.png') }}" />
+    <link rel="shortcut icon" href="{{ url('frontend/guestlayout/images/CAVD.png') }}" />
 
     <link rel="stylesheet" href="{{ url('frontend/userlayout/css/backend-plugin.min.css') }}">
     <link rel="stylesheet" href="{{ url('frontend/userlayout/css/backend.css?v=1.0.0') }}">
@@ -359,7 +359,7 @@
                                     </a>
                                 </li>
                                 <li class="sidebar-layout">
-                                    <a href="#" class="svg-icon">
+                                    <a href="{{ route('castrationandspay.user.scheduled.index') }}" class="svg-icon">
                                         <i class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                                 class="size-6">

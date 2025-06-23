@@ -1,16 +1,17 @@
 <?php
 
-use App\Http\Controllers\CastrationAndSpayAvailabilityController;
-use App\Http\Controllers\CastrationAndSpayBlockDatesController;
-use App\Http\Controllers\CastrationAndSpayController;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\FarmMechanizationAvailabilityController;
-use App\Http\Controllers\FarmMechanizationBlockDatesController;
-use App\Http\Controllers\FarmMechanizationController;
-use App\Http\Controllers\FarmMechanizationUserController;
-use App\Http\Controllers\ProfileController;
 use App\Models\FarmMechanization;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CastrationAndSpayController;
+use App\Http\Controllers\FarmMechanizationController;
+use App\Http\Controllers\CastrationAndSpayUserController;
+use App\Http\Controllers\FarmMechanizationUserController;
+use App\Http\Controllers\CastrationAndSpayBlockDatesController;
+use App\Http\Controllers\FarmMechanizationBlockDatesController;
+use App\Http\Controllers\CastrationAndSpayAvailabilityController;
+use App\Http\Controllers\FarmMechanizationAvailabilityController;
 
 //Welcome Blade
 Route::get('/', function () {
@@ -106,6 +107,11 @@ Route::get('/castrationandspay/user/blockdates/index', [CastrationAndSpayBlockDa
 Route::get('/castrationandspay/user/blockdates/create', [CastrationAndSpayBlockDatesController::class, 'blockdatescreate'])->name('castrationandspay.user.blockdates.create');
 Route::post('/castrationandspay/user/blockdates/store', [CastrationAndSpayBlockDatesController::class, 'blockdatesstore'])->name('castrationandspay.user.blockdates.store');
 Route::post('/castrationandspay/user/blockdates/bulkdelete', [CastrationAndSpayBlockDatesController::class, 'blockdatesbulkdelete'])->name('castrationandspay.user.blockdates.bulkdelete');
+
+//Castration and Spay User Route (Scheduled Operation)
+Route::get('/castrationandspay/user/pending/index', [CastrationAndSpayUserController::class, 'scheduledindex'])->name('castrationandspay.user.scheduled.index');
+Route::post('/castrationandspay/user/pending/bulk-delete', [CastrationAndSpayUserController::class, 'scheduledbulkdelete'])->name('castrationandspay.user.scheduled.bulkdelete');
+Route::post('/castrationandspay/user/pending/bulk-served', [CastrationAndSpayUserController::class, 'scheduledbulkserved'])->name('castrationandspay.user.scheduled.bulkserved');
 
 //Auth Route
 Route::middleware('auth')->group(function () {
