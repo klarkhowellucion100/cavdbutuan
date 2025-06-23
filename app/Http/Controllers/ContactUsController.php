@@ -14,16 +14,23 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $request->validate([
             'name' => 'required',
             'email' => 'nullable',
             'contact_number' => 'required',
             'message' => 'required',
+            'g-recaptcha-response' => ['required']
+        ],[
+            'g-recaptcha-response.required' => 'Please verify that you are not a robot.', // ✅ Custom message
         ]);
 
-        $data['code'] = Str::uuid();
-
-        ContactUs::create($data);
+        ContactUs::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'contact_number' => $request->contact_number,
+            'message' => $request->message,
+            'code' => Str::uuid(),
+        ]);
 
         return redirect()->back()->with('success', 'Message sent successfully! We will get back to you.');
     }

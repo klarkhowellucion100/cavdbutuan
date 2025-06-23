@@ -206,133 +206,217 @@
 
                                         <div class="col-lg-12">
                                             <div class="text-large pt-3" style="font-style: italic;"><span
-                                                    style="font-weight: bold;">Instructions:</span> <br>
+                                                    style="font-weight: bold;">Pre-Operative Instructions
+                                                    <br> <span class="text-primary">(Mga Panudlo sa Wala
+                                                        pa ang Operasyon):</span> <br>
+                                                    <span
+                                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">1.
+                                                        Securing the booking is FREE OF CHARGE, and Castration and Spay
+                                                        Service
+                                                        Request
+                                                        Slip in
+                                                        NON-TRANSFERABLE.
+                                                        <br>
+                                                        <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                            - Libre ang pagpa-book, ug ang Castration and Spay Service
+                                                            Request Slip
+                                                            dili
+                                                            puwede
+                                                            ipasa o ipatransfer sa lain.
+                                                        </span>
+                                                    </span>
+                                                    <br>
+                                                    <span
+                                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
+                                                        Do not Feed your pet 12-18 hours prior to surgery, provide only
+                                                        clean
+                                                        drinking water.
+                                                        <br>
+                                                        <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                            - Ayaw pakaona ang imong hayop 12-18 ka oras sa wala pa ang
+                                                            operasyon,
+                                                            peron pwede lang paimnon og limpyo nga tubig.
+                                                        </span>
+                                                    </span>
+                                                    <br>
+                                                    <span
+                                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
+                                                        Ensure that your pet is secured with a leash and/or a cage
+                                                        before
+                                                        transporting to the surgical area/office.
+                                                        <br>
+                                                        <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                            - Siguraduhon nga ang imong hayop nakaseguro gamit ang tali
+                                                            ug/o
+                                                            hawla
+                                                            sa wala pa ang pagdala niini sa lugar/opisina sa operasyon.
+                                                        </span></span>
+                                                    <br>
+                                                    <span
+                                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
+                                                        Bring used towels or old newspapers to be used as bedding for
+                                                        the animal
+                                                        after the surgery.
+                                                        <br>
+                                                        <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                            - Magdala og gigamit nga tuwalya o daan nga diyaryo nga
+                                                            gamiton nga
+                                                            higdaanan sa hayop human sa operasyon.
+                                                        </span>
+                                                    </span>
+                                                    <br>
+                                                    <span
+                                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
+                                                        Your pet must be vaccinated against Rabies at least 7 days prior
+                                                        to surgery
+                                                        (provide the vaccination card/certificate).
+                                                        <br>
+                                                        <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                            - Ang imong hayop kinahanglan nga nabakunahan batok sa
+                                                            Rabies labing
+                                                            menos
+                                                            7 ka adlaw sa wala pa ang operasyon (ihatag ang vaccination
+                                                            card/certificate).
+                                                        </span>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="text-large pt-3" style="font-style: italic;"><span
+                                                    style="font-weight: bold;">Needed materials per animal <span
+                                                        class="text-danger" style="font-weight: normal"> (Must be
+                                                        <span style="font-weight: bold">provided by the owner</span>
+                                                        prior or
+                                                        during the surgery) </span>
+                                                    <br> <span class="text-primary">Mga kinahanglanon nga materyales
+                                                        kada
+                                                        hayop <span class="text-danger" style="font-weight: normal">
+                                                            (Kinahanglan nga
+                                                            <span style="font-weight: bold">paliton o ihatag sa
+                                                                tag-iya</span>
+                                                            sa wala pa o panahon sa operasyon) </span>:</span></span>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">1.
-                                                    Securing the booking is FREE OF CHARGE, and Farm Mechanization
-                                                    Service
-                                                    Request
-                                                    Slip in
-                                                    NON-TRANSFERABLE.
+                                                    2 pcs Surgical gloves size 7.5
+                                                </span>
+                                                <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
+                                                    10 pcs Sterile gauze pads (any size)
+                                                </span>
+                                                <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
+                                                    3 pcs 1ml Syringes
+                                                </span>
+                                                <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
+                                                    1-2 pcs polygalactin/novosyn/vicryl stutures (size 2-0 or 3-0)
+                                                </span>
+                                                <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
+                                                    1 bottle 60ml Bactidol
+                                                </span>
+                                                <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">6.
+                                                    1 Ampule Tramadol
+                                                    <br>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="text-large pt-3" style="font-style: italic;"><span
+                                                    style="font-weight: bold;">Post-Operative Care
+                                                    <br> <span class="text-primary">(Pag-atiman pagkahuman sa
+                                                        operasyon:):</span></span> <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">1.
+                                                    Do not feed the animal for 6 to 8 hours after the surgery. After
+                                                    that,
+                                                    provide soft food diet for the animal
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Libre ang pagpa-book, ug ang Farm Mechanization Service
-                                                        Request
-                                                        Slip dili
-                                                        puwede
-                                                        ipasa o ipatransfer sa lain.
+                                                        - Ayaw pakaona ang hayop sulod sa 6 hangtod 8 ka oras pagkahuman
+                                                        sa
+                                                        operasyon. Human niini, hatagi og hapsay o humok nga pagkaon ang
+                                                        hayop.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
-                                                    A fee will be charged for the requested service which will be issued
-                                                    by
-                                                    the City
-                                                    Agriculture and Veterinary Department and must be paid at the City
-                                                    Treasury Department.
+                                                    Provide clean drinking water all the time
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Adunay bayad ang pag-request sa maong serbisyo nga i andam sa
-                                                        City
-                                                        Agriculture and Veterinary Department ug kini bayaran sa City
-                                                        Treasury
-                                                        Department.
+                                                        - Hatagi og limpyo nga imnunung tubig pirme
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
-                                                    The requestor will
-                                                    cover the fuel costs for transporting
-                                                    the machinery from the office to the designated area. Additionally,
-                                                    the
-                                                    requestor is
-                                                    responsible for providing the required 35 liters of fuel per hectare
-                                                    at
-                                                    the
-                                                    start of the
-                                                    service.
+                                                    Restrain the animal in a cage or with a leash
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Ang naghangyo (requestor) mao ang mogasto sa gasolina alang sa
-                                                        pagdala
-                                                        sa
-                                                        makina gikan sa opisina paingon sa gitudlong lugar. Dugang pa,
-                                                        ang
-                                                        naghangyo
-                                                        (requestor) responsibilidad nga maghatag sa gikinahanglan nga 35
-                                                        litro
-                                                        nga
-                                                        gasolina matag ektarya sa pagsugod sa serbisyo
-                                                    </span></span>
+                                                        - Pugngi ang hayop pinaagi sa kulungan o pagtali gamit ang
+                                                        leash.
+                                                    </span>
+                                                </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
-                                                    The document owner, who is also the requestor, must present a copy
-                                                    of
-                                                    their
-                                                    valid ID.
+                                                    Avoid strenuous activity and other stressful exercises
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Ang tag-iya sa dokumento, nga mao usab ang nag-request,
-                                                        kinahanglan
-                                                        mopakita og kopya sa iyang valid nga ID.
+                                                        - Likayi ang bug-at nga lihok ug ubang makastres nga ehersisyo.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
-                                                    We will process
-                                                    your request and validate the
-                                                    area
-                                                    within 2-3
-                                                    working days after receiving it. Thank you for your patience.
+                                                    Do not bath the animal for 14 days following the surgery
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Among iproseso
-                                                        ang imong request ug susihon ang lugar sulod sa 2-3 ka adlaw
-                                                        human
-                                                        kini madawat. Salamat sa imong pagpaabot
+                                                        - Ayaw paligoi ang hayop sulod sa 14 ka adlaw human sa
+                                                        operasyon.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">6.
-                                                    In the event that the machinery is under repair, encounters issues,
-                                                    or
-                                                    becomes
-                                                    damaged,
-                                                    we will promptly contact you to discuss potential rescheduling of
-                                                    the
-                                                    request.
+                                                    Cleanse the area around the wound with betadine(iodine) and clean
+                                                    gauze or
+                                                    cotton
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Kung ang makina nag-under repair, naay mga problema, o naguba,
-                                                        among
-                                                        dayon
-                                                        kang kontakon aron hisgutan ang posibleng pag-reschedule sa
-                                                        maong
-                                                        serbisyo
-                                                    </span></span>
-                                                <br>
-                                                <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">7.
-                                                    If fortuitous events occur, we will promptly contact you to discuss
-                                                    the
-                                                    possibility of
-                                                    rescheduling the service.
-                                                    <br>
-                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Sa dihang adunay mga dili kalikayan nga panghitabo, kami dayon
-                                                        mopahibalo
-                                                        kanimo aron hisgutan ang posibilidad sa pag-re-schedule sa
-                                                        serbisyo.
+                                                        - Limpyohi ang palibot sa samad gamit ang Betadine (iodine) ug
+                                                        limpyo
+                                                        nga gauze o cotton.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">8.
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">7.
+                                                    If wounds continuously bleed or mutilated, please contact the local
+                                                    veterinarian
+                                                    <br>
+                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                        - Kung ang samad padayon nga nagdugo o naguba, palihug kontaka
+                                                        dayon ang
+                                                        lokal nga beterinaryo.
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="text-large pt-3" style="font-style: italic;"><span
+                                                    style="font-weight: bold;">Other Instructions
+                                                    <br> <span class="text-primary">(Ubang mga
+                                                        instruksyon):</span></span> <br>
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">1.
                                                     For concerns and inquiries, transact with authorized CAVD personnel
                                                     only.
                                                     <br>
@@ -343,7 +427,7 @@
                                                 </span>
                                                 <br>
                                                 <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">9.
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
                                                     The CAVD strictly implements the <span class="text-primary"
                                                         style="font-weight: bold;">"NO GIFT POLICY"</span> pursuant to
                                                     Republic Act
@@ -360,11 +444,10 @@
                                                 </span>
                                                 <br>
                                                 <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">10.
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
                                                     The CAVD supports the <span class="text-primary"
                                                         style="font-weight: bold;">"ANTI-FIXER CAMPAIGN"</span>. Report
-                                                    the
-                                                    name of
+                                                    the name of
                                                     the fixer, name and location of government office, date and type of
                                                     transaction
                                                     to any of the following contact numbers:
@@ -375,8 +458,7 @@
                                                             CAMPAIGN"</span>. Ireport ang
                                                         ngalan
                                                         sa fixer, ngalan ug lokasyon sa buhatan sa gobyerno, petsa ug
-                                                        klase
-                                                        sa
+                                                        klase sa
                                                         transaksiyon sa bisan asa sa mosunod nga mga numero sa kontak:
                                                     </span>
                                                     <br>
@@ -432,78 +514,63 @@
                                                 <span style="font-weight: bold;">Procedure:</span> <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">1.
-                                                    Present the Farm Mechanization Service Request Slip with your valid
-                                                    ID
-                                                    to the
-                                                    Information Desk for
-                                                    validation
+                                                    Please ensure that the Pre-Operative Instructions were executed and
+                                                    all
+                                                    materials required from the owner are brought before the
+                                                    operation can commence.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Ipakita ang Farm Mechanization Service Request Slip kauban sa
-                                                        imohang
-                                                        valid ID sa Information Desk
-                                                        aron ma-validate
+                                                        - Palihug siguroa nga ang tanang naka indikar sa Pre-Operative
+                                                        Instructions
+                                                        natuman
+                                                        og tanang materyales nga gikinahanglan gikan sa
+                                                        tag-iya nadala na sa dili pa magsugod ang operasyon.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
-                                                    Once validated, proceed to the Administrative Support Unit to claim
-                                                    the
-                                                    printed
-                                                    Request Form and sign it. Afterwards, secure the Cash Collection
-                                                    Slip
-                                                    for
-                                                    payment.
+                                                    Proceed to the City Agriculture and Veterinary Department (CAVD) and
+                                                    present the
+                                                    Castration and Spay Service Request Slip with your valid ID to the
+                                                    Information Desk for
+                                                    validation
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Kung ma-validate na, palihug adto sa Administrative Support
-                                                        Unit
-                                                        aron
-                                                        kuhaon ug pirmahan ang gi-print nga Request Form. Human niini,
-                                                        kuhaa
-                                                        ang
-                                                        Cash Collection Slip para sa bayad.
+                                                        - Adto sa City Agriculture and Veterinary Department (CAVD) ug
+                                                        ipakita ang
+                                                        Castration ug Spay Service Request Slip uban sa imong valid ID
+                                                        sa
+                                                        Information Desk para sa beripikasyon
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
-                                                    Proceed to the City Treasury Department to settle the fees indicated
-                                                    in
-                                                    the Cash
-                                                    Collection Slip
+                                                    After your documents have been validated, proceed to the Plant and
+                                                    Animal Health
+                                                    Unit for the procedure.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Palihug adto sa City Treasury Department aron bayran ang mga
-                                                        bayrunon nga
-                                                        nakasulat sa Cash Collection Slip
+                                                        - Human ma-validate ang imong mga dokumento, pwede na dayun ta
+                                                        mupadayon sa
+                                                        Plant and Animal
+                                                        Health Unit alang sa maong proseso.
                                                     </span>
                                                 </span>
                                                 <br>
                                                 <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
-                                                    Check the Official Receipt (OR), and count the change, if any
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
+                                                    After the operation, please take note of the veterinarian's advice
+                                                    and carefully
+                                                    follow the post-operative instructions provided in this document.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Susiha ang Official Receipt (OR), ug ihap ang sinsilyo kung
-                                                        adunay
-                                                        sukli
-                                                    </span>
-                                                </span>
-                                                <br>
-                                                <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
-                                                    Search your transaction through this link
-                                                    {{ config('app.url') }}/castrationandspay/track and upload the OR
-                                                    for
-                                                    proof
-                                                    of payment
-                                                    <br>
-                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        I-search ang imong transaksyon pinaagi niini nga link:
-                                                        {{ config('app.url') }}/castrationandspay/track
-                                                        ug i-upload ang OR isip ebidensya sa bayad.
+                                                        - Human sa operasyon, palihug timan-i ang tambag sa beterinaryo
+                                                        ug sundon
+                                                        pag-ayo ang mga giya sa post-operatibo nga nakabutang sa niini
+                                                        nga
+                                                        dokumento.
                                                     </span>
                                                 </span>
                                                 <br>

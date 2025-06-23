@@ -313,6 +313,15 @@
                                                 placeholder="Enter your Message"></textarea>
                                         </div>
 
+                                        <div class="flex items-center justify-end mb-2">
+                                            <div class="g-recaptcha"
+                                                data-sitekey="{{ config('app.captcha.captcha_site_key') }}"
+                                                data-callback="onCaptchaSuccess">
+                                            </div>
+                                        </div>
+
+                                        <x-input-error :messages="$errors->get('g-recaptcha-response')" class="mt-2" />
+
                                         <div class="form-group">
                                             <button class="btn bg-primary" type="submit">
                                                 <i class="fa fa-paper-plane"></i>&nbsp;Send message

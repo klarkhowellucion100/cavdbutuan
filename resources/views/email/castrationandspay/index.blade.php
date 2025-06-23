@@ -9,7 +9,7 @@
     <p>Dear {{ $data['full_name'] }},</p>
 
     <p><strong>Transaction Number:</strong> {{ $data['transaction_number'] }}</p>
-    <p><strong>Visitation Schedule:</strong> {{ \Carbon\Carbon::parse($data['visitation_schedule'])->format('F j, Y') }}
+    <p><strong>Operation Schedule:</strong> {{ \Carbon\Carbon::parse($data['visitation_schedule'])->format('F j, Y') }}
     </p>
     <p><strong>Time:</strong>
         {{ \Carbon\Carbon::createFromFormat('H:i:s', $data['time_from'])->format('h:i A') }}
