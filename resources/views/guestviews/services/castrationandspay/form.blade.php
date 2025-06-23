@@ -532,34 +532,13 @@
                                     <br>
                                     <span
                                         style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
-                                        Proceed to the City Treasury Department to settle the fees indicated in the Cash
-                                        Collection Slip
+                                        After the operation, please take note of the veterinarian's advice and carefully
+                                        follow the post-operative instructions provided in this document.
                                         <br>
                                         <span class="text-primary fw-bold" style="font-weight:bold;">
-                                            - Palihug adto sa City Treasury Department aron bayran ang mga bayrunon nga
-                                            nakasulat sa Cash Collection Slip
-                                        </span>
-                                    </span>
-                                    <br>
-                                    <span
-                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
-                                        Check the Official Receipt (OR), and count the change, if any
-                                        <br>
-                                        <span class="text-primary fw-bold" style="font-weight:bold;">
-                                            - Susiha ang Official Receipt (OR), ug ihap ang sinsilyo kung adunay sukli
-                                        </span>
-                                    </span>
-                                    <br>
-                                    <span
-                                        style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
-                                        Search your transaction through this link
-                                        {{ config('app.url') }}/farmmechanization/track and upload the OR for proof
-                                        of payment
-                                        <br>
-                                        <span class="text-primary fw-bold" style="font-weight:bold;">
-                                            I-search ang imong transaksyon pinaagi niini nga link:
-                                            {{ config('app.url') }}/farmmechanization/track
-                                            ug i-upload ang OR isip ebidensya sa bayad.
+                                            - Human sa operasyon, palihug timan-i ang tambag sa beterinaryo ug sundon
+                                            pag-ayo ang mga giya sa post-operatibo nga nakabutang sa niini nga
+                                            dokumento.
                                         </span>
                                     </span>
                                     <br>
