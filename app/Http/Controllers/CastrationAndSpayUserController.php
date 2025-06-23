@@ -19,8 +19,6 @@ class CastrationAndSpayUserController extends Controller
             ->first();
 
         $servedClientsCount = DB::table('castration_and_spays as a')
-            ->join('farm_mechanization_cash_collections as b', 'a.id', 'b.farm_mechanization_id')
-            // ->where('b.final_schedule', '>=', $today)
             ->where('a.request_status', 1)
             ->select(DB::raw('COUNT(a.id) as total_count'))
             ->first();
@@ -75,7 +73,23 @@ class CastrationAndSpayUserController extends Controller
             'scheduledOperationList' => $scheduledOperationList
         ]);
     }
+
+    public function scheduledbulkdelete(Request $request){
+        $ids = $request->input('selected_ids');
+
+        if ($ids) {
+            DB::table('castration_and_spays')->whereIn('id', $ids)->delete();
+        }
+        return redirect()->back()->with('success', 'Selected records deleted successfully.');
+    }
+
+    public function scheduledbulkserved(Request $request){
+        $ids = $request->input('selected_ids');
+
+        if ($ids) {
+            DB::table('castration_and_spays')->whereIn('id', $ids)->update(['request_status' => 1]);
+        }
+        return redirect()->back()->with('success', 'Selected records served successfully.');
+    }
 }
-
-
 

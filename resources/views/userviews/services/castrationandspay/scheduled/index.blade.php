@@ -99,7 +99,7 @@
                             @endif
                         </form>
                         <div class="table-responsive">
-                            <form id="visitationForm" method="POST">
+                            <form id="operationForm" method="POST">
                                 @csrf
 
                                 <div class="d-flex gap-2">
@@ -125,6 +125,8 @@
                                             <th>Pet Specie</th>
                                             <th>Pet Age</th>
                                             <th>Pet Color</th>
+                                            <th>Vaccination Card</th>
+                                            <th>Form</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -158,6 +160,8 @@
                                                     Month:{{ $operationList->animal_age_month }}
                                                 </td>
                                                 <td>{{ $operationList->animal_color }}</td>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -190,7 +194,7 @@
     <!-- Approve Confirmation Modal -->
     <div id="customServedModal" class="custom-modal">
         <div class="custom-modal-content">
-            <button class="custom-close-btn" id="approveCloseBtn">&times;</button>
+            <button class="custom-close-btn" id="servedCloseBtn">&times;</button>
             <div class="custom-modal-header">Confirm Served</div>
             <div>Are you sure you want to approve the selected items?</div>
             <div class="custom-modal-footer">
@@ -250,14 +254,14 @@
 
         // Confirm Delete
         document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
-            const form = document.getElementById('visitationForm');
+            const form = document.getElementById('operationForm');
             form.action = "{{ route('castrationandspay.user.scheduled.bulkdelete') }}";
             form.submit();
         });
 
         // Confirm Served
         document.getElementById('confirmServedBtn').addEventListener('click', function() {
-            const form = document.getElementById('visitationForm');
+            const form = document.getElementById('operationForm');
             form.action = "{{ route('castrationandspay.user.scheduled.bulkserved') }}";
             form.submit();
         });
