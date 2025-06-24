@@ -120,6 +120,10 @@ Route::get('/castrationandspay/user/served/index', [CastrationAndSpayUserControl
 Route::get('/castrationandspay/user/served/form/{id}', [CastrationAndSpayUserController::class, 'servedform'])->name('castrationandspay.user.served.form');
 Route::get('/castrationandspay/user/served/card/{id}', [CastrationAndSpayUserController::class, 'servedcard'])->name('castrationandspay.user.served.card');
 
+//Castration and Spay User Create Admin
+Route::get('/castrationandspay/user/scheduled/admincreate', [CastrationAndSpayUserController::class, 'admincreate'])->name('castrationandspay.user.scheduled.admincreate');
+Route::post('/castrationandspay/user/scheduled/adminpost', [CastrationAndSpayUserController::class, 'adminpost'])->name('castrationandspay.user.scheduled.adminpost');
+
 //Auth Route
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
