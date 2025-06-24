@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CastrationAndSpay;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class CastrationAndSpayUserController extends Controller
 {
@@ -74,14 +76,28 @@ class CastrationAndSpayUserController extends Controller
         ]);
     }
 
-    public function scheduledbulkdelete(Request $request){
+   public function scheduledbulkdelete(Request $request)
+    {
         $ids = $request->input('selected_ids');
 
         if ($ids) {
+            $records = DB::table('castration_and_spays')->whereIn('id', $ids)->get();
+
+            foreach ($records as $record) {
+                if ($record->vaccination_card) {
+                    $filePath = storage_path('app/public/' . $record->vaccination_card);
+                    if (file_exists($filePath)) {
+                        unlink($filePath); // Direct file deletion
+                    }
+                }
+            }
+
             DB::table('castration_and_spays')->whereIn('id', $ids)->delete();
         }
-        return redirect()->back()->with('success', 'Selected records deleted successfully.');
+
+        return redirect()->back()->with('success', 'Selected records and their files deleted successfully.');
     }
+
 
     public function scheduledbulkserved(Request $request){
         $ids = $request->input('selected_ids');
@@ -90,6 +106,28 @@ class CastrationAndSpayUserController extends Controller
             DB::table('castration_and_spays')->whereIn('id', $ids)->update(['request_status' => 1]);
         }
         return redirect()->back()->with('success', 'Selected records served successfully.');
+    }
+
+    public function scheduledform($id){
+        $formData = DB::table('castration_and_spays as a')
+            ->join('area_regions as b', 'a.region_id', 'b.region_id')
+            ->join('area_provinces as c', 'a.province_id', 'c.province_id')
+            ->join('area_municipalities as d', 'a.municipality_id', 'd.municipality_id')
+            ->join('area_barangays as e', 'a.barangay_id', 'e.barangay_id')
+            ->where('a.id', $id)
+            ->first();
+
+        return view('userviews.services.castrationandspay.scheduled.form', [
+            'formData' => $formData
+        ]);
+    }
+
+    public function scheduledcard($id){
+        $vaccinationCard = CastrationAndSpay::find($id);
+
+        return view('userviews.services.castrationandspay.scheduled.card', [
+            'vaccinationCard' => $vaccinationCard
+        ]);
     }
 }
 

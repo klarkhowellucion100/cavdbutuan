@@ -87,8 +87,8 @@
                                     </div>
                                 </div>
 
-                                <img src="{{ asset($fileExists->uploaded_file) }}" class="img-fluid rounded"
-                                    alt="Responsive image">
+                                <img src="{{ asset('storage/' . $fileExists->uploaded_file) }}"
+                                    class="img-fluid rounded" alt="Responsive image">
                             </div>
                         @endif
                     @else

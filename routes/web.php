@@ -109,9 +109,16 @@ Route::post('/castrationandspay/user/blockdates/store', [CastrationAndSpayBlockD
 Route::post('/castrationandspay/user/blockdates/bulkdelete', [CastrationAndSpayBlockDatesController::class, 'blockdatesbulkdelete'])->name('castrationandspay.user.blockdates.bulkdelete');
 
 //Castration and Spay User Route (Scheduled Operation)
-Route::get('/castrationandspay/user/pending/index', [CastrationAndSpayUserController::class, 'scheduledindex'])->name('castrationandspay.user.scheduled.index');
-Route::post('/castrationandspay/user/pending/bulk-delete', [CastrationAndSpayUserController::class, 'scheduledbulkdelete'])->name('castrationandspay.user.scheduled.bulkdelete');
-Route::post('/castrationandspay/user/pending/bulk-served', [CastrationAndSpayUserController::class, 'scheduledbulkserved'])->name('castrationandspay.user.scheduled.bulkserved');
+Route::get('/castrationandspay/user/scheduled/index', [CastrationAndSpayUserController::class, 'scheduledindex'])->name('castrationandspay.user.scheduled.index');
+Route::post('/castrationandspay/user/scheduled/bulk-delete', [CastrationAndSpayUserController::class, 'scheduledbulkdelete'])->name('castrationandspay.user.scheduled.bulkdelete');
+Route::post('/castrationandspay/user/scheduled/bulk-served', [CastrationAndSpayUserController::class, 'scheduledbulkserved'])->name('castrationandspay.user.scheduled.bulkserved');
+Route::get('/castrationandspay/user/scheduled/form/{id}', [CastrationAndSpayUserController::class, 'scheduledform'])->name('castrationandspay.user.scheduled.form');
+Route::get('/castrationandspay/user/scheduled/card/{id}', [CastrationAndSpayUserController::class, 'scheduledcard'])->name('castrationandspay.user.scheduled.card');
+
+//Castration and Spay User Route (Served Clients)
+Route::get('/castrationandspay/user/served/index', [CastrationAndSpayUserController::class, 'servedindex'])->name('castrationandspay.user.served.index');
+Route::get('/castrationandspay/user/served/form/{id}', [CastrationAndSpayUserController::class, 'servedform'])->name('castrationandspay.user.served.form');
+Route::get('/castrationandspay/user/served/card/{id}', [CastrationAndSpayUserController::class, 'servedcard'])->name('castrationandspay.user.served.card');
 
 //Auth Route
 Route::middleware('auth')->group(function () {

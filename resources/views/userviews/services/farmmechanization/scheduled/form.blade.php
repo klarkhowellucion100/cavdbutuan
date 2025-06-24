@@ -458,6 +458,10 @@
                                                                 the possibility of
                                                                 rescheduling the service.
                                                             </li>
+                                                            <li>
+                                                                For concerns and inquiries, transact with authorized
+                                                                CAVD personnel only.
+                                                            </li>
                                                         </ol>
                                                         <p>Thank you!</p>
                                                     </div>
