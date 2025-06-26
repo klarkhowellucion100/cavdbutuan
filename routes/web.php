@@ -13,10 +13,17 @@ use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
 use App\Http\Controllers\FarmMechanizationAvailabilityController;
+use App\Models\Banner;
 
 //Welcome Blade
 Route::get('/', function () {
-    return view('welcome');
+     $bannerLatest = Banner::select('banner_picture')
+        ->orderBy('created_at', 'desc')
+        ->limit(5)
+        ->get(); // ← Important!
+    return view('welcome', [
+        'bannerLatest' => $bannerLatest
+    ]);
 });
 
 //Contact Us Route

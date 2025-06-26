@@ -1,47 +1,19 @@
 <x-guestlayout.layout>
 
     <!-- Inspiro Slider -->
-    <div id="slider" class="inspiro-slider slider-halfscreen dots-creative" data-height-xs="360" data-autoplay="2600"
+    <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-height-xs="360" data-autoplay="2600"
         data-animate-in="fadeIn" data-animate-out="fadeOut" data-items="1" data-loop="true" data-autoplay="true">
         <!-- Slide 1 -->
-        <div class="slide" data-bg-image="homepages/construction/images/1.jpg">
-            <div class="container">
-                <div class="slide-captions text-left">
+        @foreach ($bannerLatest as $banners)
+            <div class="slide" data-bg-image="{{ asset('storage/' . $banners->banner_picture) }}">
+                <div class="container">
+                    <div class="slide-captions text-left">
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end: Slide 1 -->
-        <!-- Slide 2 -->
-        <div class="slide" data-bg-image="homepages/construction/images/2.jpg">
-            <div class="container">
-                <div class="slide-captions text-left">
-
-                </div>
-            </div>
-        </div>
-        <div class="slide" data-bg-image="homepages/construction/images/2.jpg">
-            <div class="container">
-                <div class="slide-captions text-left">
-
-                </div>
-            </div>
-        </div>
-        <div class="slide" data-bg-image="homepages/construction/images/2.jpg">
-            <div class="container">
-                <div class="slide-captions text-left">
-
-                </div>
-            </div>
-        </div>
-        <div class="slide" data-bg-image="homepages/construction/images/2.jpg">
-            <div class="container">
-                <div class="slide-captions text-left">
-
-                </div>
-            </div>
-        </div>
-        <!-- end: Slide 2 -->
+            <!-- end: Slide 1 -->
+        @endforeach
     </div>
     <!--end: Inspiro Slider -->
 
@@ -63,115 +35,6 @@
                                     Comments</a></span>
                             <h2>
                                 <a href="#">Lighthouse, standard post with a single image</a>
-                            </h2>
-                            <p>
-                                Curabitur pulvinar euismod ante, ac sagittis ante
-                                posuere ac. Vivamus luctus commodo dolor porta feugiat.
-                                Fusce at velit id ligula pharetra laoreet.
-                            </p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: Post item-->
-                <!-- Post item-->
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-slider">
-                            <div class="carousel dots-inside arrows-visible arrows-only" data-items="1" data-loop="true"
-                                data-autoplay="true" data-lightbox="gallery">
-                                <a href="frontend/guestlayout/images/CAVD2.png" data-lightbox="gallery-image">
-                                    <img alt="" src="images/blog/16.jpg" /></a>
-                                <a href="images/blog/16.jpg" data-lightbox="gallery-image">
-                                    <img alt="" src="images/blog/11.jpg" /></a>
-                            </div>
-                            <span class="post-meta-category"><a href="">Technology</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
-                                    Comments</a></span>
-                            <h2>
-                                <a href="#">Simplicity, a post with slider gallery</a>
-                            </h2>
-                            <p>
-                                Curabitur pulvinar euismod ante, ac sagittis ante
-                                posuere ac. Vivamus luctus commodo dolor porta feugiat.
-                                Fusce at velit id ligula pharetra laoreet.
-                            </p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: Post item-->
-                <!-- Post item-->
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#"> <img alt="" src="images/blog/17.jpg" /></a>
-                            <span class="post-meta-category"><a href="">Science</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
-                                    Comments</a></span>
-                            <h2>
-                                <a href="#">Lighthouse, standard post with a single image</a>
-                            </h2>
-                            <p>
-                                Curabitur pulvinar euismod ante, ac sagittis ante
-                                posuere ac. Vivamus luctus commodo dolor porta feugiat.
-                                Fusce at velit id ligula pharetra laoreet.
-                            </p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: Post item-->
-                <!-- Post item-->
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#"> <img alt="" src="images/blog/18.jpg" /></a>
-                            <span class="post-meta-category"><a href="">Science</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
-                                    Comments</a></span>
-                            <h2>
-                                <a href="#">Lighthouse, standard post with a single image</a>
-                            </h2>
-                            <p>
-                                Curabitur pulvinar euismod ante, ac sagittis ante
-                                posuere ac. Vivamus luctus commodo dolor porta feugiat.
-                                Fusce at velit id ligula pharetra laoreet.
-                            </p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: Post item-->
-                <!-- Post item-->
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-slider">
-                            <div class="carousel dots-inside arrows-visible arrows-only" data-autoplay="2600"
-                                data-animate-in="fadeIn" data-animate-out="fadeOut" data-items="1" data-loop="true"
-                                data-autoplay="true" data-lightbox="gallery">
-                                <a href="images/blog/19.jpg" data-lightbox="gallery-image">
-                                    <img alt="" src="images/blog/19.jpg" /></a>
-                                <a href="images/blog/20.jpg" data-lightbox="gallery-image">
-                                    <img alt="" src="images/blog/20.jpg" /></a>
-                            </div>
-                            <span class="post-meta-category"><a href="">Technology</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
-                                    Comments</a></span>
-                            <h2>
-                                <a href="#">Simplicity, a post with slider gallery</a>
                             </h2>
                             <p>
                                 Curabitur pulvinar euismod ante, ac sagittis ante
@@ -264,8 +127,8 @@
                                     aria-controls="core" aria-selected="false">Core Values</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
-                                    role="tab" aria-controls="contact" aria-selected="true">Startegy Map</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="true">Startegy Map</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
