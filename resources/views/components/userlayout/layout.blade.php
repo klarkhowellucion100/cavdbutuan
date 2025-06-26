@@ -226,7 +226,8 @@
                             </a>
                         </li> --}}
                         <li class="sidebar-layout">
-                            <a href="#app1" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                            <a href="#appsfarmmechanization" class="collapsed svg-icon" data-toggle="collapse"
+                                aria-expanded="false">
                                 <i class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -240,7 +241,7 @@
                                         d="M9 5l7 7-7 7" />
                                 </svg>
                             </a>
-                            <ul id="app1" class="submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <ul id="appsfarmmechanization" class="submenu collapse" data-parent="#iq-sidebar-toggle">
 
                                 <li class="sidebar-layout">
                                     <a href="{{ route('farmmechanization.user.availability.index') }}" class="svg-icon">
@@ -296,7 +297,7 @@
                             </ul>
                         </li>
                         <li class="sidebar-layout">
-                            <a href="#app6" class="collapsed svg-icon" data-toggle="collapse"
+                            <a href="#appscastrationandspay" class="collapsed svg-icon" data-toggle="collapse"
                                 aria-expanded="false">
                                 <i>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 64 64"
@@ -318,8 +319,7 @@
                                         d="M9 5l7 7-7 7" />
                                 </svg>
                             </a>
-                            <ul id="app6" class="submenu collapse" data-parent="#iq-sidebar-toggle">
-
+                            <ul id="appscastrationandspay" class="submenu collapse" data-parent="#iq-sidebar-toggle">
                                 <li class="sidebar-layout">
                                     <a href="{{ route('castrationandspay.user.availability.index') }}"
                                         class="svg-icon">
@@ -369,6 +369,37 @@
                                             </svg>
                                         </i>
                                         <span class="">Appointments</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#appbanners" class="collapsed svg-icon" data-toggle="collapse"
+                                aria-expanded="false">
+                                <i class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </i>
+                                <span class="ml-2">Banners</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active"
+                                    width="15" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <ul id="appbanners" class="submenu collapse" data-parent="#iq-sidebar-toggle">
+
+                                <li class="sidebar-layout">
+                                    <a href="{{ route('banners.user.index') }}" class="svg-icon">
+                                        <i class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                            </svg>
+                                        </i><span class="">All Banners</span>
                                     </a>
                                 </li>
                             </ul>

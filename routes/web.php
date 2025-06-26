@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Models\FarmMechanization;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -123,6 +124,12 @@ Route::get('/castrationandspay/user/served/card/{id}', [CastrationAndSpayUserCon
 //Castration and Spay User Create Admin
 Route::get('/castrationandspay/user/scheduled/admincreate', [CastrationAndSpayUserController::class, 'admincreate'])->name('castrationandspay.user.scheduled.admincreate');
 Route::post('/castrationandspay/user/scheduled/adminpost', [CastrationAndSpayUserController::class, 'adminpost'])->name('castrationandspay.user.scheduled.adminpost');
+
+//Banner Routes
+Route::get('/banners/user/index', [BannerController::class, 'index'])->name('banners.user.index');
+Route::get('/banners/user/create', [BannerController::class, 'create'])->name('banners.user.create');
+Route::post('/banners/user/store', [BannerController::class, 'store'])->name('banners.user.store');
+Route::post('/banners/user/bulk-delete', [BannerController::class, 'bulkDelete'])->name('banners.user.bulkdelete');
 
 //Auth Route
 Route::middleware('auth')->group(function () {

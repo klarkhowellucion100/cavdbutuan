@@ -12,7 +12,11 @@ class BannerController extends Controller
      */
     public function index()
     {
-        //
+        $banners = Banner::paginate(10);
+
+        return view('userviews.banners.index', [
+            'banners' => $banners
+        ]);
     }
 
     /**
