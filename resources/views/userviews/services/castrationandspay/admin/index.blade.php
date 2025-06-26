@@ -556,14 +556,13 @@
                                         });
                                         const formattedDate = dateStr; // "YYYY-MM-DD"
 
-                                        // Available slots for this day name
                                         const daySchedule = schedule[dayName] || [];
-                                        // Booked slots for this exact date
                                         const bookedForDate = bookedSlots[formattedDate] || [];
+
+                                        let availableCount = 0; // Track available slots added
 
                                         if (daySchedule.length > 0) {
                                             daySchedule.forEach(slot => {
-                                                // Skip if slot is booked for this date
                                                 const isBooked = bookedForDate.some(booked =>
                                                     booked.time_from === slot.time_from && booked.time_to ===
                                                     slot.time_to
@@ -587,12 +586,16 @@
                                                 });
 
                                                 timeContainer.appendChild(btn);
+                                                availableCount++; // Increment if slot was added
                                             });
-                                        } else {
+                                        }
+
+                                        if (availableCount === 0) {
                                             timeContainer.innerHTML =
-                                                `<p class="text-danger">No available times for <strong>${dayName}</strong>.</p>`;
+                                                `<p class="text-danger">No more available timeslot for <strong>this date</strong>.</p>`;
                                         }
                                     }
+
                                 });
 
                                 function formatTime(timeStr) {
