@@ -129,7 +129,8 @@ Route::post('/castrationandspay/user/scheduled/adminpost', [CastrationAndSpayUse
 Route::get('/banners/user/index', [BannerController::class, 'index'])->name('banners.user.index');
 Route::get('/banners/user/create', [BannerController::class, 'create'])->name('banners.user.create');
 Route::post('/banners/user/store', [BannerController::class, 'store'])->name('banners.user.store');
-Route::post('/banners/user/bulk-delete', [BannerController::class, 'bulkDelete'])->name('banners.user.bulkdelete');
+Route::get('/banners/user/view/{id}', [BannerController::class, 'view'])->name('banners.user.view');
+Route::post('/banners/user/bulkdelete', [BannerController::class, 'bulkdelete'])->name('banners.user.bulkdelete');
 
 //Auth Route
 Route::middleware('auth')->group(function () {

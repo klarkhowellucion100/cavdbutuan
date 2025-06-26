@@ -5,25 +5,13 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="p-3">Banners</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
                         <h5 class="p-3">Banner List</h5>
                         <div class="table-responsive">
                             <form id="operationForm" method="POST">
                                 @csrf
 
                                 <div class="d-flex gap-2">
-                                    <a class="btn btn-primary" href="{{ route('banners.user.create') }}">Create</a>
+                                    <a class="btn btn-primary mr-2" href="{{ route('banners.user.create') }}">Create</a>
                                     <button type="button" class="btn btn-danger" id="deleteBtn">Delete</button>
                                 </div>
                                 <table class="table align-middle text-center">
@@ -32,7 +20,6 @@
                                             <th>
                                                 <input type="checkbox" id="selectAll">
                                             </th>
-                                            <th>Transaction No.</th>
                                             <th>Date Posted</th>
                                             <th>View</th>
                                         </tr>
@@ -45,14 +32,11 @@
                                                         value="{{ $banner->id }}">
                                                 </td>
                                                 <td>
-                                                    {{ $banner->transaction_number }}
-                                                </td>
-                                                <td>
-                                                    {{ \Carbon\Carbon::parse($operationList->visitation_schedule)->format('l, F j, Y') }}
+                                                    {{ \Carbon\Carbon::parse($banner->created_at)->format('l, F j, Y') }}
                                                 </td>
 
                                                 <td>
-                                                    <a href="{{ route('castrationandspay.user.scheduled.form', $banner->id) }}"
+                                                    <a href="{{ route('banners.user.view', $banner->id) }}"
                                                         class="btn btn-sm btn-outline-success">
                                                         <i class="">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="18"
@@ -72,7 +56,7 @@
                         </div>
 
                         <x-paginationlayout>
-                            {{ $scheduledOperationList->appends(request()->query())->links() }}
+                            {{ $banners->appends(request()->query())->links() }}
                         </x-paginationlayout>
                     </div>
                 </div>
@@ -85,23 +69,10 @@
         <div class="custom-modal-content">
             <button class="custom-close-btn" id="deleteCloseBtn">&times;</button>
             <div class="custom-modal-header">Confirm Deletion</div>
-            <div>Are you sure you want to delete the selected data?</div>
+            <div>Are you sure you want to delete the selected banners?</div>
             <div class="custom-modal-footer">
                 <button class="btn btn-secondary" id="deleteCancelBtn">Cancel</button>
                 <button class="btn btn-danger" id="confirmDeleteBtn">Yes, Delete</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Approve Confirmation Modal -->
-    <div id="customServedModal" class="custom-modal">
-        <div class="custom-modal-content">
-            <button class="custom-close-btn" id="servedCloseBtn">&times;</button>
-            <div class="custom-modal-header">Confirm Served</div>
-            <div>Are you sure you want to approve the selected items?</div>
-            <div class="custom-modal-footer">
-                <button class="btn btn-secondary" id="servedCancelBtn">Cancel</button>
-                <button class="btn btn-success" id="confirmServedBtn">Yes, Approve</button>
             </div>
         </div>
     </div>
@@ -118,7 +89,6 @@
 
         // Elements
         const deleteModal = document.getElementById('customDeleteModal');
-        const servedModal = document.getElementById('customServedModal');
 
         // Select all / checkboxes logic (assuming you have these buttons and checkboxes)
         document.getElementById('selectAll').addEventListener('click', function(e) {
@@ -136,35 +106,14 @@
             }
         });
 
-        // Served button - show modal
-        document.getElementById('servedBtn').addEventListener('click', function() {
-            const selected = document.querySelectorAll('input[name="selected_ids[]"]:checked');
-            if (selected.length === 0) {
-                alert('Please select at least one item to update the status.');
-            } else {
-                showModal(servedModal);
-            }
-        });
-
         // Delete Modal close buttons
         document.getElementById('deleteCloseBtn').addEventListener('click', () => hideModal(deleteModal));
         document.getElementById('deleteCancelBtn').addEventListener('click', () => hideModal(deleteModal));
 
-        // Served Modal close buttons
-        document.getElementById('servedCloseBtn').addEventListener('click', () => hideModal(servedModal));
-        document.getElementById('servedCancelBtn').addEventListener('click', () => hideModal(servedModal));
-
         // Confirm Delete
         document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
             const form = document.getElementById('operationForm');
-            form.action = "{{ route('castrationandspay.user.scheduled.bulkdelete') }}";
-            form.submit();
-        });
-
-        // Confirm Served
-        document.getElementById('confirmServedBtn').addEventListener('click', function() {
-            const form = document.getElementById('operationForm');
-            form.action = "{{ route('castrationandspay.user.scheduled.bulkserved') }}";
+            form.action = "{{ route('banners.user.bulkdelete') }}";
             form.submit();
         });
 
@@ -172,9 +121,6 @@
         window.addEventListener('click', function(event) {
             if (event.target === deleteModal) {
                 hideModal(deleteModal);
-            }
-            if (event.target === servedModal) {
-                hideModal(servedModal);
             }
         });
     </script>
