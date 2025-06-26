@@ -6,6 +6,7 @@ use App\Models\Banner;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\File;
 
 class BannerController extends Controller
@@ -44,6 +45,8 @@ class BannerController extends Controller
         } else {
             $bannerUpload['banner_picture'] = null; // Set to null if no file is uploaded
         }
+
+        $bannerUpload['user_id'] = Auth::id(); // Assuming you want to associate the banner with the authenticated user
 
         Banner::create($bannerUpload);
         return redirect()->back()->with('success', 'Banner uploaded successfully!');
