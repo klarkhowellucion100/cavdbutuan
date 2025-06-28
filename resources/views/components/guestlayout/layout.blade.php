@@ -164,6 +164,7 @@
                                             <li><a href="#">AgriBOOST Portal</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="{{ route('news.guest.index') }}">News</a></li>
                                     <li class="dropdown">
                                         <a href="#">User</a>
                                         <ul class="dropdown-menu">
@@ -171,6 +172,7 @@
                                             <li><a href="{{ route('register') }}">Register</a></li>
                                         </ul>
                                     </li>
+
                                 </ul>
                             </nav>
                         </div>

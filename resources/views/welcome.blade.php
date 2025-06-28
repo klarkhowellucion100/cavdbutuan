@@ -22,30 +22,49 @@
             <h4 class="mb-4 text-primary">CAVD ON THE MOVE</h4>
             <div class="carousel" data-items="3">
                 <!-- Post item-->
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="#"> <img alt=""
-                                    src="{{ url('frontend/guestlayout/images/1.jpg') }}" /></a>
-                            <span class="post-meta-category"><a href="">Lifestyle</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                            <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
-                                    Comments</a></span>
-                            <h2>
-                                <a href="#">Lighthouse, standard post with a single image</a>
-                            </h2>
-                            <p>
-                                Curabitur pulvinar euismod ante, ac sagittis ante
-                                posuere ac. Vivamus luctus commodo dolor porta feugiat.
-                                Fusce at velit id ligula pharetra laoreet.
-                            </p>
-                            <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                @foreach ($newsLatest as $news)
+                    <div class="post-item border">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="#"> <img alt=""
+                                        src="{{ asset('storage/' . $news->image) }}" /></a>
+                                {{-- <span class="post-meta-category"><a href="">Lifestyle</a></span> --}}
+                            </div>
+                            <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
+                                    {{ \Carbon\Carbon::parse($news->published_at)->format('l, F j, Y') }}
+                                </span>
+                                {{-- <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
+                                        Comments</a></span> --}}
+                                <h2>
+                                    <a href="#">{{ $news->title }}</a>
+                                </h2>
+                                @php
+                                    $lettersOnly = preg_replace('/[^a-zA-Z]/', '', $news->content);
+                                    $limit = 200;
+                                    $letterCount = 0;
+                                    $result = '';
+
+                                    for ($i = 0; $i < strlen($news->content); $i++) {
+                                        if (ctype_alpha($news->content[$i])) {
+                                            $letterCount++;
+                                        }
+                                        if ($letterCount > $limit) {
+                                            break;
+                                        }
+                                        $result .= $news->content[$i];
+                                    }
+                                @endphp
+                                <p style="text-align: justify;">
+                                    {{ $result }}...
+                                </p>
+                                <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- end: Post item-->
+                    <!-- end: Post item-->
+                @endforeach
+
             </div>
             <!--end: Post Carousel -->
         </div>

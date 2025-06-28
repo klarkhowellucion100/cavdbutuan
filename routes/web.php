@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\BannerController;
+use App\Models\News;
+use App\Models\Banner;
 use App\Models\FarmMechanization;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CastrationAndSpayController;
@@ -13,7 +16,7 @@ use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
 use App\Http\Controllers\FarmMechanizationAvailabilityController;
-use App\Models\Banner;
+use App\Http\Controllers\NewsGuestController;
 
 //Welcome Blade
 Route::get('/', function () {
@@ -21,8 +24,14 @@ Route::get('/', function () {
         ->orderBy('created_at', 'desc')
         ->limit(5)
         ->get(); // ← Important!
+
+        $newsLatest = News::orderBy('published_at', 'desc')
+        ->limit(5)
+        ->get();
+
     return view('welcome', [
-        'bannerLatest' => $bannerLatest
+        'bannerLatest' => $bannerLatest,
+        'newsLatest' => $newsLatest
     ]);
 });
 
@@ -138,6 +147,20 @@ Route::get('/banners/user/create', [BannerController::class, 'create'])->name('b
 Route::post('/banners/user/store', [BannerController::class, 'store'])->name('banners.user.store');
 Route::get('/banners/user/view/{id}', [BannerController::class, 'view'])->name('banners.user.view');
 Route::post('/banners/user/bulkdelete', [BannerController::class, 'bulkdelete'])->name('banners.user.bulkdelete');
+
+//News Routes
+Route::get('/news/user/index', [NewsController::class, 'index'])->name('news.user.index');
+Route::get('/news/user/create', [NewsController::class, 'create'])->name('news.user.create');
+Route::post('/news/user/store', [NewsController::class, 'store'])->name('news.user.store');
+Route::get('/news/user/edit/{id}', [NewsController::class, 'edit'])->name('news.user.edit');
+Route::put('/news/user/update/{id}', [NewsController::class, 'update'])->name('news.user.update');
+Route::get('/news/user/editpic/{id}', [NewsController::class, 'editpic'])->name('news.user.editpic');
+Route::put('/news/user/updatepic/{id}', [NewsController::class, 'updatepic'])->name('news.user.updatepic');
+Route::post('/news/user/bulkdelete', [NewsController::class, 'bulkdelete'])->name('news.user.bulkdelete');
+
+//News Guest Route
+Route::get('/news/guest', [NewsGuestController::class, 'index'])->name('news.guest.index');
+Route::get('/news/guest/{id}', [NewsGuestController::class, 'show'])->name('news.guest.show');
 
 //Auth Route
 Route::middleware('auth')->group(function () {

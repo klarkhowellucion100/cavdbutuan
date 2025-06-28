@@ -35,7 +35,7 @@
                                             <div class="form-group col-md-12">
                                                 <div class="custom-file mb-3">
                                                     <input type="file" class="custom-file-input" id="banner_picture"
-                                                        name="banner_picture">
+                                                        required name="banner_picture">
                                                     <label class="custom-file-label" for="banner_picture">Choose
                                                         file</label>
                                                 </div>

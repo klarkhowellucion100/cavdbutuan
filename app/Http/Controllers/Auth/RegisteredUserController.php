@@ -46,10 +46,12 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        event(new Registered($user));
+        return redirect()->route('login')->with('status', 'Registration successful! Your account is waiting for approval. Please wait for confirmation before signing in.');
 
-        Auth::login($user);
+        // event(new Registered($user));
 
-        return redirect(route('dashboard', absolute: false));
+        // Auth::login($user);
+
+        // return redirect(route('dashboard', absolute: false));
     }
 }
