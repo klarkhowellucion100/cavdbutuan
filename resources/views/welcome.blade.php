@@ -19,7 +19,7 @@
 
     <section>
         <div class="container">
-            <h4 class="mb-4 text-primary">CAVD ON THE MOVE</h4>
+            <h4 class="mb-4 text-primary">CAVD ON THE MOVE - LATEST</h4>
             <div class="carousel" data-items="3">
                 <!-- Post item-->
                 @foreach ($newsLatest as $news)

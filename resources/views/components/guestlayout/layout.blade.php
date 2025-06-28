@@ -105,9 +105,19 @@
                     <div id="search">
                         <a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
                                 class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
+                        {{-- <form class="search-form" action="search-results-page.html" method="get">
+                            <input class="form-control" name="q" type="text" />
                             <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                        </form> --}}
+                        <form method="GET" action="{{ route('news.guest.index') }}" class="search-form">
+                            <input type="text" name="search" class="form-control" placeholder="Type & Search..."
+                                value="{{ request('search') }}">
+                            <span class="text-muted mb-3">Start typing & press "Enter" or "ESC" to close</span>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                            @if (request('search'))
+                                <a href="{{ route('news.guest.index') }}" class="btn btn-secondary">Clear</a>
+                            @endif
                         </form>
                     </div>
                     <!-- end: search -->
@@ -147,12 +157,15 @@
                                             <li><a href="#" class="text-primary">Avail</a></li>
                                             <li><a href="{{ route('farmmechanization.create') }}">Farm Mechanization</a>
                                             </li>
-                                            <li><a href="{{ route('castrationandspay.create') }}">Dog/Cat Castration and
+                                            <li><a href="{{ route('castrationandspay.create') }}">Dog/Cat Castration
+                                                    and
                                                     Spay</a></li>
                                             <li><a href="#" class="text-primary">Track</a></li>
-                                            <li><a href="{{ route('farmmechanization.track') }}">Farm Mechanization</a>
+                                            <li><a href="{{ route('farmmechanization.track') }}">Farm
+                                                    Mechanization</a>
                                             </li>
-                                            <li><a href="{{ route('castrationandspay.track') }}">Dog/Cat Castration and
+                                            <li><a href="{{ route('castrationandspay.track') }}">Dog/Cat Castration
+                                                    and
                                                     Spay</a></li>
                                         </ul>
                                     </li>

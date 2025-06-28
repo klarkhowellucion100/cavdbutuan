@@ -23,7 +23,7 @@ class NewsGuestController extends Controller
         $news = $newsListQuery
             ->select('a.*')
             ->orderBy('a.published_at', 'desc')
-            ->paginate(4, ['*'], 'news_page');
+            ->paginate(8, ['*'], 'news_page');
 
         return view('guestviews.news.index',[
             'news' => $news

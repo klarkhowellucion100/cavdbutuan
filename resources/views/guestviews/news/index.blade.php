@@ -8,7 +8,16 @@
             </div>
             <!-- end: Page title -->
             <!-- Blog -->
+            <form method="GET" action="{{ route('news.guest.index') }}" class="mb-3 d-flex gap-2 align-items-center">
+                <input type="text" name="search" class="form-control"
+                    placeholder="Search by name, transaction no., etc." value="{{ request('search') }}">
+                <button type="submit" class="btn btn-primary">Search</button>
+                @if (request('search'))
+                    <a href="{{ route('news.guest.index') }}" class="btn btn-secondary">Clear</a>
+                @endif
+            </form>
             <div id="blog" class="grid-layout post-4-columns m-b-30" data-item="post-item">
+
                 <!-- Post item-->
                 @foreach ($news as $perNews)
                     <div class="post-item border">
