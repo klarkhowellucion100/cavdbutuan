@@ -26,7 +26,7 @@
                     <div class="post-item border">
                         <div class="post-item-wrap">
                             <div class="post-image">
-                                <a href="#"> <img alt=""
+                                <a href="{{ route('news.guest.show', $news->id) }}"> <img alt=""
                                         src="{{ asset('storage/' . $news->image) }}" /></a>
                                 {{-- <span class="post-meta-category"><a href="">Lifestyle</a></span> --}}
                             </div>
@@ -37,7 +37,7 @@
                                 {{-- <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33
                                         Comments</a></span> --}}
                                 <h2>
-                                    <a href="#">{{ $news->title }}</a>
+                                    <a href="{{ route('news.guest.show', $news->id) }}">{{ $news->title }}</a>
                                 </h2>
                                 @php
                                     $lettersOnly = preg_replace('/[^a-zA-Z]/', '', $news->content);
@@ -58,7 +58,8 @@
                                 <p style="text-align: justify;">
                                     {{ $result }}...
                                 </p>
-                                <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                                <a href="{{ route('news.guest.show', $news->id) }}" class="item-link">Read More <i
+                                        class="icon-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>

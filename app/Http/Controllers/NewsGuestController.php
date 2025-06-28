@@ -29,4 +29,17 @@ class NewsGuestController extends Controller
             'news' => $news
         ]);
     }
+
+    public function show($id)
+    {
+        $news = DB::table('news')->find($id);
+
+        if (!$news) {
+            abort(404);
+        }
+
+        return view('guestviews.news.show', [
+            'news' => $news
+        ]);
+    }
 }

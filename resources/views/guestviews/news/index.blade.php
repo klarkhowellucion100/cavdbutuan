@@ -14,16 +14,18 @@
                     <div class="post-item border">
                         <div class="post-item-wrap">
                             <div class="post-image">
-                                <a href="#">
+                                <a href="{{ route('news.guest.show', $perNews->id) }}">
                                     <img alt="" src="{{ asset('storage/' . $perNews->image) }}">
                                 </a>
-                                <span class="post-meta-category"><a href="">CAVD</a></span>
+                                <span class="post-meta-category"><a
+                                        href="{{ route('news.guest.show', $perNews->id) }}">CAVD</a></span>
                             </div>
                             <div class="post-item-description">
                                 <span class="post-meta-date"><i class="fa fa-calendar-o"></i>
                                     {{ \Carbon\Carbon::parse($perNews->published_at)->format('l, F j, Y') }}
                                 </span>
-                                <h2><a href="#">{{ $perNews->title }}</a></h2>
+                                <h2><a href="{{ route('news.guest.show', $perNews->id) }}">{{ $perNews->title }}</a>
+                                </h2>
                                 </a></h2>
                                 @php
                                     $lettersOnly = preg_replace('/[^a-zA-Z]/', '', $perNews->content);
@@ -44,7 +46,8 @@
                                 <p>
                                     {{ $result }}...
                                 </p>
-                                <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                                <a href="{{ route('news.guest.show', $perNews->id) }}" class="item-link">Read More <i
+                                        class="icon-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
