@@ -17,7 +17,7 @@ class FarmMechanizationAvailabilityController extends Controller
     {
         $availabilityDates = FarmMechanizationAvailability::orderByRaw("
     FIELD(day_name, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
-")->get();
+")->orderBy('time_from','asc')->paginate(32);
 
 
         return view('userviews.services.farmmechanization.availability.index', [

@@ -54,9 +54,9 @@
                             </form>
                         </div>
 
-                        {{-- <x-paginationlayout>
-                            {{ $allBlockedDates->appends(request()->query())->links() }}
-                        </x-paginationlayout> --}}
+                        <x-paginationlayout>
+                            {{ $availabilityDates->appends(request()->query())->links() }}
+                        </x-paginationlayout>
                     </div>
                 </div>
             </div>

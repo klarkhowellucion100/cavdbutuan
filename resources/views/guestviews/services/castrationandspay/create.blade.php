@@ -148,11 +148,11 @@
                                                         <div class="grid-item-wrap">
                                                             <div class="grid-image">
                                                                 <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step1.png') }}" />
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step1.png') }}" />
                                                             </div>
                                                             <div class="grid-description">
                                                                 <a title="Step 1" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step1.png') }}"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step1.png') }}"
                                                                     class="btn btn-light btn-rounded">Zoom</a>
                                                             </div>
                                                         </div>
@@ -165,13 +165,11 @@
                                             <div class="col-lg-6">
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
-                                                    Select your proposed date for Land Preparation and schedule your
-                                                    Office Visit.
+                                                    Select an animal type and the corresponding service to proceed.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Pilia ang imong gisuportang petsa para sa Pag-andam sa
-                                                        Yuta ug
-                                                        pag-schedule sa imong Pagbisita sa Opisina.
+                                                        - Pilia ang klase sa hayop ug ang angay nga serbisyo aron
+                                                        magpadayon.
                                                     </span>
                                                 </span>
                                             </div>
@@ -181,11 +179,11 @@
                                                         <div class="grid-item-wrap">
                                                             <div class="grid-image">
                                                                 <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}" />
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step2.png') }}" />
                                                             </div>
                                                             <div class="grid-description">
                                                                 <a title="Step 2" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step2.png') }}"
                                                                     class="btn btn-light btn-rounded">Zoom</a>
                                                             </div>
                                                         </div>
@@ -194,53 +192,14 @@
                                             </div>
                                         </div>
                                         <br>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
-                                                    Select your proposed date for Land Preparation and schedule your
-                                                    Office Visit.
-                                                    <br>
-                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Pilia ang imong gisuportang petsa para sa Pag-andam sa Yuta ug
-                                                        pag-schedule sa imong Pagbisita sa Opisina.
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="col-lg-12">
-                                                    <div class="grid-item">
-                                                        <div class="grid-item-wrap">
-                                                            <div class="grid-image">
-                                                                <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}" />
-                                                            </div>
-                                                            <div class="grid-description">
-                                                                <a title="Step 2" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}"
-                                                                    class="btn btn-light btn-rounded">Zoom</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
-                                                    Provide the details of the availed service, including the
-                                                    machinery
-                                                    used, area size, your category as the requestor, and other
-                                                    relevant
-                                                    request information.
+                                                    Select your preferred date and time of operation.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Isulod ang mga detalye sa serbisyong gi-avail, lakip ang
-                                                        makinang gigamit, gidak-on sa yuta, imong kategorya isip
-                                                        nangayo
-                                                        sa serbisyo, ug uban pang may kalabutan nga impormasyon sa
-                                                        hangyo.
+                                                        - Pilia ang imong gustong petsa ug oras sa operasyon.
                                                     </span>
                                                 </span>
                                             </div>
@@ -250,11 +209,11 @@
                                                         <div class="grid-item-wrap">
                                                             <div class="grid-image">
                                                                 <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step3.png') }}" />
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step3.png') }}" />
                                                             </div>
                                                             <div class="grid-description">
-                                                                <a title="Step 3" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step3.png') }}"
+                                                                <a title="Step 2" data-lightbox="image"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step3.png') }}"
                                                                     class="btn btn-light btn-rounded">Zoom</a>
                                                             </div>
                                                         </div>
@@ -266,6 +225,48 @@
                                             <div class="col-lg-6">
                                                 <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">4.
+                                                    Provide the details of latest date of vaccination and upload the
+                                                    vaccination card for reference. The animal must have been vaccinated
+                                                    more than 7 days prior to the operation. If the vaccination is
+                                                    already over a year old, it is considered expired. Please ensure the
+                                                    animal receives a new vaccination and schedule the operation at
+                                                    least one week afterward. For your convenience, you may also avail
+                                                    of CAVD’s walk-in vaccination services
+                                                    <br>
+                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                        - Ihatag ang detalye sa pinakabag-o nga petsa sa pagbakuna ug
+                                                        i-upload ang vaccination card isip reperensya. Ang hayop
+                                                        kinahanglan nabakunahan na sulod sa kapin sa 7 ka adlaw sa wala
+                                                        pa ang operasyon. Kung ang bakuna kapin na sa usa ka tuig, kini
+                                                        giisip nga expired. Palihug siguroha nga nabakunahan pag-usab
+                                                        ang hayop ug i-schedule ang operasyon usa ka semana pagkahuman
+                                                        sa bakuna. Para sa inyong kasayon, pwede sab mo magpa-bakuna
+                                                        pinaagi sa walk-in vaccination services sa CAVD.
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="col-lg-12">
+                                                    <div class="grid-item">
+                                                        <div class="grid-item-wrap">
+                                                            <div class="grid-image">
+                                                                <img alt="Image Lightbox"
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step4.png') }}" />
+                                                            </div>
+                                                            <div class="grid-description">
+                                                                <a title="Step 3" data-lightbox="image"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step4.png') }}"
+                                                                    class="btn btn-light btn-rounded">Zoom</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">5.
                                                     Please enter your personal details accurately.
                                                     <br>
                                                     <span class="text-primary fw-bold" style="font-weight:bold;">
@@ -280,11 +281,40 @@
                                                         <div class="grid-item-wrap">
                                                             <div class="grid-image">
                                                                 <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step4.png') }}" />
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step5.png') }}" />
                                                             </div>
                                                             <div class="grid-description">
                                                                 <a title="Step 4" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step4.png') }}"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step5.png') }}"
+                                                                    class="btn btn-light btn-rounded">Zoom</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <span
+                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">6.
+                                                    Please enter your pet details accurately.
+                                                    <br>
+                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
+                                                        - Palihug isulod ang tukmang detalye sa imong alagang hayop.
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="col-lg-12">
+                                                    <div class="grid-item">
+                                                        <div class="grid-item-wrap">
+                                                            <div class="grid-image">
+                                                                <img alt="Image Lightbox"
+                                                                    src="{{ url('frontend/guestlayout/images/castrationandspay-step6.png') }}" />
+                                                            </div>
+                                                            <div class="grid-description">
+                                                                <a title="Step 4" data-lightbox="image"
+                                                                    href="{{ url('frontend/guestlayout/images/castrationandspay-step6.png') }}"
                                                                     class="btn btn-light btn-rounded">Zoom</a>
                                                             </div>
                                                         </div>

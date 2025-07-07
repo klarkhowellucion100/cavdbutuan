@@ -153,37 +153,6 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <span
-                                                    style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">2.
-                                                    Select your proposed date for Land Preparation and schedule your
-                                                    Office Visit.
-                                                    <br>
-                                                    <span class="text-primary fw-bold" style="font-weight:bold;">
-                                                        - Pilia ang imong gisuportang petsa para sa Pag-andam sa Yuta ug
-                                                        pag-schedule sa imong Pagbisita sa Opisina.
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="col-lg-12">
-                                                    <div class="grid-item">
-                                                        <div class="grid-item-wrap">
-                                                            <div class="grid-image">
-                                                                <img alt="Image Lightbox"
-                                                                    src="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}" />
-                                                            </div>
-                                                            <div class="grid-description">
-                                                                <a title="Step 2" data-lightbox="image"
-                                                                    href="{{ url('frontend/guestlayout/images/farmmech-step2.png') }}"
-                                                                    class="btn btn-light btn-rounded">Zoom</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <span
                                                     style="display: block; padding-left: 20px; text-indent: -20px; margin-left: 20px;">3.
                                                     Provide the details of the availed service, including the
                                                     machinery

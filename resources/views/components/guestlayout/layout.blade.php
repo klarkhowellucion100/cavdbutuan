@@ -57,7 +57,7 @@
                                 <span style="font-size: 13px;"><i class="far fa-clock"></i> PST:</span> <span
                                     style="font-size: 13px;" id="pst-time"></span>
 
-                                <script type="text/javascript">
+                                {{-- <script type="text/javascript">
                                     (function(d, eId) {
                                         var js, gjs = d.getElementById(eId);
                                         js = d.createElement('script');
@@ -69,7 +69,7 @@
                                     var gwtpstReady = function() {
                                         new gwtpstTime('pst-time');
                                     }
-                                </script>
+                                </script> --}}
                             </li>
                         </ul>
                     </div>
@@ -243,12 +243,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-lg-2 col-md-4">
                             <!-- Footer widget area 1 -->
-                            <div class="widget widget-contact-us"
-                                style="
-                                        background-image: url('images/world-map-dark.png');
-                                        background-position: 50% 20px;
-                                        background-repeat: no-repeat;
-                                    ">
+                            <div class="widget widget-contact-us">
                                 <h4><img style="height: 70px;"
                                         src="{{ url('frontend/guestlayout/images/CAVD.png') }}" alt=""></h4>
                                 <ul class="list-icon">
@@ -437,11 +432,9 @@
     <!-- Scroll top -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <!--Plugins-->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="{{ url('frontend/guestlayout/js/jquery.js') }}"></script>
     <script src="{{ url('frontend/guestlayout/js/plugins.js') }}"></script>
 
-    <!--Template functions-->
     <script src="{{ url('frontend/guestlayout/js/functions.js') }}"></script>
 </body>
 
