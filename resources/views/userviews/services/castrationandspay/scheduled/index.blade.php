@@ -115,7 +115,7 @@
                                                 <input type="checkbox" id="selectAll">
                                             </th>
                                             <th>Transaction No.</th>
-                                            <th>Operation Date</th>
+                                            <th>Operation Date & Time</th>
                                             <th>Service</th>
                                             <th>Name</th>
                                             <th>Contact No.</th>
@@ -141,8 +141,13 @@
                                                 <td>
                                                     {{ $operationList->transaction_number }}
                                                 </td>
-                                                <td>
+                                                <td style="font-weight: bold;">
                                                     {{ \Carbon\Carbon::parse($operationList->visitation_schedule)->format('l, F j, Y') }}
+                                                    <span class="text-primary">
+                                                        {{ \Carbon\Carbon::createFromFormat('H:i:s', $operationList->time_from)->format('h:i A') }}
+                                                        to
+                                                        {{ \Carbon\Carbon::createFromFormat('H:i:s', $operationList->time_to)->format('h:i A') }}
+                                                    </span>
                                                 </td>
                                                 <td>{{ $operationList->service_type }}</td>
                                                 <td>{{ $operationList->full_name }}</td>
