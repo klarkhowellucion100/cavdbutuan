@@ -21,6 +21,7 @@
                                                 <input type="checkbox" id="selectAll">
                                             </th>
                                             <th>Full Name</th>
+                                            <th>Email</th>
                                             <th>Status</th>
                                             <th>Role</th>
                                             <th>Update</th>
@@ -35,6 +36,9 @@
                                                 </td>
                                                 <td>
                                                     {{ $user->name }}
+                                                </td>
+                                                <td>
+                                                    {{ $user->email }}
                                                 </td>
                                                 <td>
                                                     @if ($user->reg_status == 1)
