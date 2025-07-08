@@ -8,6 +8,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\NewsGuestController;
+use App\Http\Controllers\ManageUsersController;
 use App\Http\Controllers\CastrationAndSpayController;
 use App\Http\Controllers\FarmMechanizationController;
 use App\Http\Controllers\CastrationAndSpayUserController;
@@ -16,7 +18,6 @@ use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
 use App\Http\Controllers\FarmMechanizationAvailabilityController;
-use App\Http\Controllers\NewsGuestController;
 
 //Welcome Blade
 Route::get('/', function () {
@@ -161,6 +162,12 @@ Route::post('/news/user/bulkdelete', [NewsController::class, 'bulkdelete'])->nam
 //News Guest Route
 Route::get('/news/guest', [NewsGuestController::class, 'index'])->name('news.guest.index');
 Route::get('/news/guest/{id}', [NewsGuestController::class, 'show'])->name('news.guest.show');
+
+//Manage Users Route
+Route::get('/manageusers/index',[ManageUsersController::class, 'index'])->name('manageusers.index');
+Route::get('/manageusers/edit/{id}',[ManageUsersController::class, 'edit'])->name('manageusers.edit');
+Route::put('/manageusers/update/{id}',[ManageUsersController::class, 'update'])->name('manageusers.update');
+Route::post('/manageusers/bulkdelete', [ManageUsersController::class, 'bulkdelete'])->name('manageusers.bulkdelete');
 
 //Auth Route
 Route::middleware('auth')->group(function () {
