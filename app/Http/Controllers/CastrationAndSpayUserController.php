@@ -70,6 +70,7 @@ class CastrationAndSpayUserController extends Controller
         $scheduledOperationList = $scheduledOperationListQuery
             ->select('a.*', 'b.region_name as region', 'c.province_name as province', 'd.municipality_name as municipality', 'e.barangay_name as barangay')
             ->orderBy('a.visitation_schedule', 'desc')
+             ->orderBy('a.time_from', 'asc')
             ->paginate(10, ['*'], 'scheduledOperationList_page');
 
         return view('userviews.services.castrationandspay.scheduled.index', [
@@ -191,6 +192,7 @@ class CastrationAndSpayUserController extends Controller
         $servedOperationList = $servedOperationListQuery
             ->select('a.*', 'b.region_name as region', 'c.province_name as province', 'd.municipality_name as municipality', 'e.barangay_name as barangay')
             ->orderBy('a.visitation_schedule', 'desc')
+             ->orderBy('a.time_from', 'asc')
             ->paginate(10, ['*'], 'servedOperationList_page');
 
         return view('userviews.services.castrationandspay.served.index', [
