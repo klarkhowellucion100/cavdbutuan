@@ -180,7 +180,7 @@
     <div class="wrapper">
         <div class="iq-sidebar  sidebar-default">
             <div class="iq-sidebar-logo d-flex align-items-end justify-content-between">
-                <a href="{{ route('dashboard') }}" class="header-logo">
+                <a href="{{ route('dashboard.farmmechanization') }}" class="header-logo">
                     <img src="{{ url('frontend/guestlayout/images/CAVD.png') }}"
                         class="img-fluid rounded-normal light-logo" alt="logo">
                     <img src="{{ url('frontend/guestlayout/images/CAVD.png') }}"
@@ -199,7 +199,7 @@
                 <nav class="iq-sidebar-menu">
                     <ul id="iq-sidebar-toggle" class="side-menu">
                         <li class=" sidebar-layout">
-                            <a href="{{ route('dashboard') }}" class="svg-icon">
+                            <a href="{{ route('dashboard.farmmechanization') }}" class="svg-icon">
                                 <i class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">

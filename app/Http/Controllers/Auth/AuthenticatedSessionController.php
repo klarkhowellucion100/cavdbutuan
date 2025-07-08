@@ -48,7 +48,7 @@ class AuthenticatedSessionController extends Controller
     $request->session()->regenerate();
 
     // Proceed to dashboard
-    return redirect()->intended(route('dashboard', absolute: false));
+    return redirect()->intended(route('dashboard.farmmechanization', absolute: false));
 }
 
     /**

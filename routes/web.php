@@ -14,6 +14,7 @@ use App\Http\Controllers\CastrationAndSpayController;
 use App\Http\Controllers\FarmMechanizationController;
 use App\Http\Controllers\CastrationAndSpayUserController;
 use App\Http\Controllers\FarmMechanizationUserController;
+use App\Http\Controllers\FarmMechanizationDashboardController;
 use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
@@ -39,14 +40,9 @@ Route::get('/', function () {
 //Contact Us Route
 Route::post('/contactus/store', [ContactUsController::class, 'store'])->name('contactus.store');
 
-//Dashboard Route
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/dashboard/services', function () {
-    return view('userviews.services.dashboard.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/services/farmmechanization',[FarmMechanizationDashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard.farmmechanization');
 
 //Farm Mechanization Guest Route
 Route::get('/farmmechanization/create', [FarmMechanizationController::class, 'create'])->name('farmmechanization.create');
