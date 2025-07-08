@@ -63,46 +63,46 @@ Route::get('/get-municipalities/{province_id}', [FarmMechanizationController::cl
 Route::get('/get-barangays/{municipality_id}', [FarmMechanizationController::class, 'getBarangays']);
 
 //Farm Mechanization User Route (Pending Visitation)
-Route::get('/farmmechanization/user/pending/index', [FarmMechanizationUserController::class, 'pendingindex'])->name('farmmechanization.user.pending.index');
-Route::post('/farmmechanization/user/pending/bulk-delete', [FarmMechanizationUserController::class, 'pendingbulkdelete'])->name('farmmechanization.user.pending.bulkdelete');
-Route::post('/farmmechanization/user/pending/bulk-approve', [FarmMechanizationUserController::class, 'pendingbulkapprove'])->name('farmmechanization.user.pending.bulkapprove');
+Route::get('/farmmechanization/user/pending/index', [FarmMechanizationUserController::class, 'pendingindex'])->name('farmmechanization.user.pending.index')->middleware('auth');
+Route::post('/farmmechanization/user/pending/bulk-delete', [FarmMechanizationUserController::class, 'pendingbulkdelete'])->name('farmmechanization.user.pending.bulkdelete')->middleware('auth');
+Route::post('/farmmechanization/user/pending/bulk-approve', [FarmMechanizationUserController::class, 'pendingbulkapprove'])->name('farmmechanization.user.pending.bulkapprove')->middleware('auth');
 
 //Farm Mechanization User Route (Approved Visitation)
-Route::get('/farmmechanization/user/approved/index', [FarmMechanizationUserController::class, 'approvedindex'])->name('farmmechanization.user.approved.index');
-Route::get('/farmmechanization/user/approved/show/{id}', [FarmMechanizationUserController::class, 'approvedshow'])->name('farmmechanization.user.approved.show');
-Route::post('/farmmechanization/user/approved/cashcollection', [FarmMechanizationUserController::class, 'approvedcashcollection'])->name('farmmechanization.user.approved.cashcollection');
+Route::get('/farmmechanization/user/approved/index', [FarmMechanizationUserController::class, 'approvedindex'])->name('farmmechanization.user.approved.index')->middleware('auth');
+Route::get('/farmmechanization/user/approved/show/{id}', [FarmMechanizationUserController::class, 'approvedshow'])->name('farmmechanization.user.approved.show')->middleware('auth');
+Route::post('/farmmechanization/user/approved/cashcollection', [FarmMechanizationUserController::class, 'approvedcashcollection'])->name('farmmechanization.user.approved.cashcollection')->middleware('auth');
 
 //Farm Mechanization User Route (Scheduled Service)
-Route::get('/farmmechanization/user/scheduled/index', [FarmMechanizationUserController::class, 'scheduledindex'])->name('farmmechanization.user.scheduled.index');
-Route::get('/farmmechanization/user/scheduled/form/{id}', [FarmMechanizationUserController::class, 'scheduledform'])->name('farmmechanization.user.scheduled.form');
-Route::get('/farmmechanization/user/scheduled/edit/{id}', [FarmMechanizationUserController::class, 'schedulededit'])->name('farmmechanization.user.scheduled.edit');
-Route::put('/farmmechanization/user/scheduled/update/{id}', [FarmMechanizationUserController::class, 'scheduledupdate'])->name('farmmechanization.user.scheduled.update');
-Route::get('/farmmechanization/user/scheduled/upload/{id}', [FarmMechanizationUserController::class, 'scheduledupload'])->name('farmmechanization.user.scheduled.upload');
-Route::post('/farmmechanization/user/scheduled/uploadstore', [FarmMechanizationUserController::class, 'scheduleduploadstore'])->name('farmmechanization.user.scheduled.uploadstore');
-Route::delete('/farmmechanization/user/scheduled/delete/{id}', [FarmMechanizationUserController::class, 'scheduleddelete'])->name('farmmechanization.user.scheduled.delete');
+Route::get('/farmmechanization/user/scheduled/index', [FarmMechanizationUserController::class, 'scheduledindex'])->name('farmmechanization.user.scheduled.index')->middleware('auth');
+Route::get('/farmmechanization/user/scheduled/form/{id}', [FarmMechanizationUserController::class, 'scheduledform'])->name('farmmechanization.user.scheduled.form')->middleware('auth');
+Route::get('/farmmechanization/user/scheduled/edit/{id}', [FarmMechanizationUserController::class, 'schedulededit'])->name('farmmechanization.user.scheduled.edit')->middleware('auth');
+Route::put('/farmmechanization/user/scheduled/update/{id}', [FarmMechanizationUserController::class, 'scheduledupdate'])->name('farmmechanization.user.scheduled.update')->middleware('auth');
+Route::get('/farmmechanization/user/scheduled/upload/{id}', [FarmMechanizationUserController::class, 'scheduledupload'])->name('farmmechanization.user.scheduled.upload')->middleware('auth');
+Route::post('/farmmechanization/user/scheduled/uploadstore', [FarmMechanizationUserController::class, 'scheduleduploadstore'])->name('farmmechanization.user.scheduled.uploadstore')->middleware('auth');
+Route::delete('/farmmechanization/user/scheduled/delete/{id}', [FarmMechanizationUserController::class, 'scheduleddelete'])->name('farmmechanization.user.scheduled.delete')->middleware('auth');
 
 //Farm Mechanization User Route (Served Clients)
-Route::get('/farmmechanization/user/served/index', [FarmMechanizationUserController::class, 'servedindex'])->name('farmmechanization.user.served.index');
-Route::post('/farmmechanization/user/served/bulkserved', [FarmMechanizationUserController::class, 'servedbulkserved'])->name('farmmechanization.user.served.bulkserved');
+Route::get('/farmmechanization/user/served/index', [FarmMechanizationUserController::class, 'servedindex'])->name('farmmechanization.user.served.index')->middleware('auth');
+Route::post('/farmmechanization/user/served/bulkserved', [FarmMechanizationUserController::class, 'servedbulkserved'])->name('farmmechanization.user.served.bulkserved')->middleware('auth');
 
 //Farm Mechanization Create Admin
-Route::get('/farmmechanization/user/scheduled/admincreate', [FarmMechanizationUserController::class, 'admincreate'])->name('farmmechanization.user.scheduled.admincreate');
-Route::post('/farmmechanization/user/scheduled/adminpost', [FarmMechanizationUserController::class, 'adminpost'])->name('farmmechanization.user.scheduled.adminpost');
-Route::delete('/farmmechanization/user/scheduled/admindelete/{id}', [FarmMechanizationUserController::class, 'admindelete'])->name('farmmechanization.user.scheduled.admindelete');
+Route::get('/farmmechanization/user/scheduled/admincreate', [FarmMechanizationUserController::class, 'admincreate'])->name('farmmechanization.user.scheduled.admincreate')->middleware('auth');
+Route::post('/farmmechanization/user/scheduled/adminpost', [FarmMechanizationUserController::class, 'adminpost'])->name('farmmechanization.user.scheduled.adminpost')->middleware('auth');
+Route::delete('/farmmechanization/user/scheduled/admindelete/{id}', [FarmMechanizationUserController::class, 'admindelete'])->name('farmmechanization.user.scheduled.admindelete')->middleware('auth');
 
 //Farm Mechanization Block Dates
-Route::get('/farmmechanization/user/blockdates/index', [FarmMechanizationBlockDatesController::class, 'blockdatesindex'])->name('farmmechanization.user.blockdates.index');
-Route::get('/farmmechanization/user/blockdates/create', [FarmMechanizationBlockDatesController::class, 'blockdatescreate'])->name('farmmechanization.user.blockdates.create');
-Route::post('/farmmechanization/user/blockdates/store', [FarmMechanizationBlockDatesController::class, 'blockdatesstore'])->name('farmmechanization.user.blockdates.store');
-Route::post('/farmmechanization/user/blockdates/bulkdelete', [FarmMechanizationBlockDatesController::class, 'blockdatesbulkdelete'])->name('farmmechanization.user.blockdates.bulkdelete');
+Route::get('/farmmechanization/user/blockdates/index', [FarmMechanizationBlockDatesController::class, 'blockdatesindex'])->name('farmmechanization.user.blockdates.index')->middleware('auth');
+Route::get('/farmmechanization/user/blockdates/create', [FarmMechanizationBlockDatesController::class, 'blockdatescreate'])->name('farmmechanization.user.blockdates.create')->middleware('auth');
+Route::post('/farmmechanization/user/blockdates/store', [FarmMechanizationBlockDatesController::class, 'blockdatesstore'])->name('farmmechanization.user.blockdates.store')->middleware('auth');
+Route::post('/farmmechanization/user/blockdates/bulkdelete', [FarmMechanizationBlockDatesController::class, 'blockdatesbulkdelete'])->name('farmmechanization.user.blockdates.bulkdelete')->middleware('auth');
 
 //Farm Mechanization Availability
-Route::get('/farmmechanization/user/availability/index', [FarmMechanizationAvailabilityController::class, 'availabilityindex'])->name('farmmechanization.user.availability.index');
-Route::get('/farmmechanization/user/availability/create', [FarmMechanizationAvailabilityController::class, 'availabilitycreate'])->name('farmmechanization.user.availability.create');
-Route::post('/farmmechanization/user/availability/store', [FarmMechanizationAvailabilityController::class, 'availabilitystore'])->name('farmmechanization.user.availability.store');
-Route::post('/farmmechanization/user/availability/bulkdelete', [FarmMechanizationAvailabilityController::class, 'availabilitybulkdelete'])->name('farmmechanization.user.availability.bulkdelete');
-Route::post('/farmmechanization/user/availability/bulkdisable', [FarmMechanizationAvailabilityController::class, 'availabilitybulkdisable'])->name('farmmechanization.user.availability.bulkdisable');
-Route::post('/farmmechanization/user/availability/bulkenable', [FarmMechanizationAvailabilityController::class, 'availabilitybulkenable'])->name('farmmechanization.user.availability.bulkenable');
+Route::get('/farmmechanization/user/availability/index', [FarmMechanizationAvailabilityController::class, 'availabilityindex'])->name('farmmechanization.user.availability.index')->middleware('auth');
+Route::get('/farmmechanization/user/availability/create', [FarmMechanizationAvailabilityController::class, 'availabilitycreate'])->name('farmmechanization.user.availability.create')->middleware('auth');
+Route::post('/farmmechanization/user/availability/store', [FarmMechanizationAvailabilityController::class, 'availabilitystore'])->name('farmmechanization.user.availability.store')->middleware('auth');
+Route::post('/farmmechanization/user/availability/bulkdelete', [FarmMechanizationAvailabilityController::class, 'availabilitybulkdelete'])->name('farmmechanization.user.availability.bulkdelete')->middleware('auth');
+Route::post('/farmmechanization/user/availability/bulkdisable', [FarmMechanizationAvailabilityController::class, 'availabilitybulkdisable'])->name('farmmechanization.user.availability.bulkdisable')->middleware('auth');
+Route::post('/farmmechanization/user/availability/bulkenable', [FarmMechanizationAvailabilityController::class, 'availabilitybulkenable'])->name('farmmechanization.user.availability.bulkenable')->middleware('auth');
 
 //Castration and Spay Route
 Route::get('/castrationandspay/create', [CastrationAndSpayController::class, 'create'])->name('castrationandspay.create');
@@ -113,61 +113,61 @@ Route::post('/castrationandspay/tracksearch', [CastrationAndSpayController::clas
 Route::get('/castrationandspay/tracksearchlink', [CastrationAndSpayController::class, 'tracksearchFromLink'])->name('castrationandspay.tracksearch.link');
 
 //Castration and Spay Availability
-Route::get('/castrationandspay/user/availability/index', [CastrationAndSpayAvailabilityController::class, 'availabilityindex'])->name('castrationandspay.user.availability.index');
-Route::get('/castrationandspay/user/availability/create', [CastrationAndSpayAvailabilityController::class, 'availabilitycreate'])->name('castrationandspay.user.availability.create');
-Route::post('/castrationandspay/user/availability/store', [CastrationAndSpayAvailabilityController::class, 'availabilitystore'])->name('castrationandspay.user.availability.store');
-Route::post('/castrationandspay/user/availability/bulkdelete', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkdelete'])->name('castrationandspay.user.availability.bulkdelete');
-Route::post('/castrationandspay/user/availability/bulkdisable', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkdisable'])->name('castrationandspay.user.availability.bulkdisable');
-Route::post('/castrationandspay/user/availability/bulkenable', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkenable'])->name('castrationandspay.user.availability.bulkenable');
+Route::get('/castrationandspay/user/availability/index', [CastrationAndSpayAvailabilityController::class, 'availabilityindex'])->name('castrationandspay.user.availability.index')->middleware('auth');
+Route::get('/castrationandspay/user/availability/create', [CastrationAndSpayAvailabilityController::class, 'availabilitycreate'])->name('castrationandspay.user.availability.create')->middleware('auth');
+Route::post('/castrationandspay/user/availability/store', [CastrationAndSpayAvailabilityController::class, 'availabilitystore'])->name('castrationandspay.user.availability.store')->middleware('auth');
+Route::post('/castrationandspay/user/availability/bulkdelete', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkdelete'])->name('castrationandspay.user.availability.bulkdelete')->middleware('auth');
+Route::post('/castrationandspay/user/availability/bulkdisable', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkdisable'])->name('castrationandspay.user.availability.bulkdisable')->middleware('auth');
+Route::post('/castrationandspay/user/availability/bulkenable', [CastrationAndSpayAvailabilityController::class, 'availabilitybulkenable'])->name('castrationandspay.user.availability.bulkenable')->middleware('auth');
 
 //Castration and Spay Block Dates
-Route::get('/castrationandspay/user/blockdates/index', [CastrationAndSpayBlockDatesController::class, 'blockdatesindex'])->name('castrationandspay.user.blockdates.index');
-Route::get('/castrationandspay/user/blockdates/create', [CastrationAndSpayBlockDatesController::class, 'blockdatescreate'])->name('castrationandspay.user.blockdates.create');
-Route::post('/castrationandspay/user/blockdates/store', [CastrationAndSpayBlockDatesController::class, 'blockdatesstore'])->name('castrationandspay.user.blockdates.store');
-Route::post('/castrationandspay/user/blockdates/bulkdelete', [CastrationAndSpayBlockDatesController::class, 'blockdatesbulkdelete'])->name('castrationandspay.user.blockdates.bulkdelete');
+Route::get('/castrationandspay/user/blockdates/index', [CastrationAndSpayBlockDatesController::class, 'blockdatesindex'])->name('castrationandspay.user.blockdates.index')->middleware('auth');
+Route::get('/castrationandspay/user/blockdates/create', [CastrationAndSpayBlockDatesController::class, 'blockdatescreate'])->name('castrationandspay.user.blockdates.create')->middleware('auth');
+Route::post('/castrationandspay/user/blockdates/store', [CastrationAndSpayBlockDatesController::class, 'blockdatesstore'])->name('castrationandspay.user.blockdates.store')->middleware('auth');
+Route::post('/castrationandspay/user/blockdates/bulkdelete', [CastrationAndSpayBlockDatesController::class, 'blockdatesbulkdelete'])->name('castrationandspay.user.blockdates.bulkdelete')->middleware('auth');
 
 //Castration and Spay User Route (Scheduled Operation)
-Route::get('/castrationandspay/user/scheduled/index', [CastrationAndSpayUserController::class, 'scheduledindex'])->name('castrationandspay.user.scheduled.index');
-Route::post('/castrationandspay/user/scheduled/bulk-delete', [CastrationAndSpayUserController::class, 'scheduledbulkdelete'])->name('castrationandspay.user.scheduled.bulkdelete');
-Route::post('/castrationandspay/user/scheduled/bulk-served', [CastrationAndSpayUserController::class, 'scheduledbulkserved'])->name('castrationandspay.user.scheduled.bulkserved');
-Route::get('/castrationandspay/user/scheduled/form/{id}', [CastrationAndSpayUserController::class, 'scheduledform'])->name('castrationandspay.user.scheduled.form');
-Route::get('/castrationandspay/user/scheduled/card/{id}', [CastrationAndSpayUserController::class, 'scheduledcard'])->name('castrationandspay.user.scheduled.card');
+Route::get('/castrationandspay/user/scheduled/index', [CastrationAndSpayUserController::class, 'scheduledindex'])->name('castrationandspay.user.scheduled.index')->middleware('auth');
+Route::post('/castrationandspay/user/scheduled/bulk-delete', [CastrationAndSpayUserController::class, 'scheduledbulkdelete'])->name('castrationandspay.user.scheduled.bulkdelete')->middleware('auth');
+Route::post('/castrationandspay/user/scheduled/bulk-served', [CastrationAndSpayUserController::class, 'scheduledbulkserved'])->name('castrationandspay.user.scheduled.bulkserved')->middleware('auth');
+Route::get('/castrationandspay/user/scheduled/form/{id}', [CastrationAndSpayUserController::class, 'scheduledform'])->name('castrationandspay.user.scheduled.form')->middleware('auth');
+Route::get('/castrationandspay/user/scheduled/card/{id}', [CastrationAndSpayUserController::class, 'scheduledcard'])->name('castrationandspay.user.scheduled.card')->middleware('auth');
 
 //Castration and Spay User Route (Served Clients)
-Route::get('/castrationandspay/user/served/index', [CastrationAndSpayUserController::class, 'servedindex'])->name('castrationandspay.user.served.index');
-Route::get('/castrationandspay/user/served/form/{id}', [CastrationAndSpayUserController::class, 'servedform'])->name('castrationandspay.user.served.form');
-Route::get('/castrationandspay/user/served/card/{id}', [CastrationAndSpayUserController::class, 'servedcard'])->name('castrationandspay.user.served.card');
+Route::get('/castrationandspay/user/served/index', [CastrationAndSpayUserController::class, 'servedindex'])->name('castrationandspay.user.served.index')->middleware('auth');
+Route::get('/castrationandspay/user/served/form/{id}', [CastrationAndSpayUserController::class, 'servedform'])->name('castrationandspay.user.served.form')->middleware('auth');
+Route::get('/castrationandspay/user/served/card/{id}', [CastrationAndSpayUserController::class, 'servedcard'])->name('castrationandspay.user.served.card')->middleware('auth');
 
 //Castration and Spay User Create Admin
-Route::get('/castrationandspay/user/scheduled/admincreate', [CastrationAndSpayUserController::class, 'admincreate'])->name('castrationandspay.user.scheduled.admincreate');
-Route::post('/castrationandspay/user/scheduled/adminpost', [CastrationAndSpayUserController::class, 'adminpost'])->name('castrationandspay.user.scheduled.adminpost');
+Route::get('/castrationandspay/user/scheduled/admincreate', [CastrationAndSpayUserController::class, 'admincreate'])->name('castrationandspay.user.scheduled.admincreate')->middleware('auth');
+Route::post('/castrationandspay/user/scheduled/adminpost', [CastrationAndSpayUserController::class, 'adminpost'])->name('castrationandspay.user.scheduled.adminpost')->middleware('auth');
 
 //Banner Routes
-Route::get('/banners/user/index', [BannerController::class, 'index'])->name('banners.user.index');
-Route::get('/banners/user/create', [BannerController::class, 'create'])->name('banners.user.create');
-Route::post('/banners/user/store', [BannerController::class, 'store'])->name('banners.user.store');
-Route::get('/banners/user/view/{id}', [BannerController::class, 'view'])->name('banners.user.view');
-Route::post('/banners/user/bulkdelete', [BannerController::class, 'bulkdelete'])->name('banners.user.bulkdelete');
+Route::get('/banners/user/index', [BannerController::class, 'index'])->name('banners.user.index')->middleware('auth');
+Route::get('/banners/user/create', [BannerController::class, 'create'])->name('banners.user.create')->middleware('auth');
+Route::post('/banners/user/store', [BannerController::class, 'store'])->name('banners.user.store')->middleware('auth');
+Route::get('/banners/user/view/{id}', [BannerController::class, 'view'])->name('banners.user.view')->middleware('auth');
+Route::post('/banners/user/bulkdelete', [BannerController::class, 'bulkdelete'])->name('banners.user.bulkdelete')->middleware('auth');
 
 //News Routes
-Route::get('/news/user/index', [NewsController::class, 'index'])->name('news.user.index');
-Route::get('/news/user/create', [NewsController::class, 'create'])->name('news.user.create');
-Route::post('/news/user/store', [NewsController::class, 'store'])->name('news.user.store');
-Route::get('/news/user/edit/{id}', [NewsController::class, 'edit'])->name('news.user.edit');
-Route::put('/news/user/update/{id}', [NewsController::class, 'update'])->name('news.user.update');
-Route::get('/news/user/editpic/{id}', [NewsController::class, 'editpic'])->name('news.user.editpic');
-Route::put('/news/user/updatepic/{id}', [NewsController::class, 'updatepic'])->name('news.user.updatepic');
-Route::post('/news/user/bulkdelete', [NewsController::class, 'bulkdelete'])->name('news.user.bulkdelete');
+Route::get('/news/user/index', [NewsController::class, 'index'])->name('news.user.index')->middleware('auth');
+Route::get('/news/user/create', [NewsController::class, 'create'])->name('news.user.create')->middleware('auth');
+Route::post('/news/user/store', [NewsController::class, 'store'])->name('news.user.store')->middleware('auth');
+Route::get('/news/user/edit/{id}', [NewsController::class, 'edit'])->name('news.user.edit')->middleware('auth');
+Route::put('/news/user/update/{id}', [NewsController::class, 'update'])->name('news.user.update')->middleware('auth');
+Route::get('/news/user/editpic/{id}', [NewsController::class, 'editpic'])->name('news.user.editpic')->middleware('auth');
+Route::put('/news/user/updatepic/{id}', [NewsController::class, 'updatepic'])->name('news.user.updatepic')->middleware('auth');
+Route::post('/news/user/bulkdelete', [NewsController::class, 'bulkdelete'])->name('news.user.bulkdelete')->middleware('auth');
 
 //News Guest Route
 Route::get('/news/guest', [NewsGuestController::class, 'index'])->name('news.guest.index');
 Route::get('/news/guest/{id}', [NewsGuestController::class, 'show'])->name('news.guest.show');
 
 //Manage Users Route
-Route::get('/manageusers/index',[ManageUsersController::class, 'index'])->name('manageusers.index');
-Route::get('/manageusers/edit/{id}',[ManageUsersController::class, 'edit'])->name('manageusers.edit');
-Route::put('/manageusers/update/{id}',[ManageUsersController::class, 'update'])->name('manageusers.update');
-Route::post('/manageusers/bulkdelete', [ManageUsersController::class, 'bulkdelete'])->name('manageusers.bulkdelete');
+Route::get('/manageusers/index',[ManageUsersController::class, 'index'])->name('manageusers.index')->middleware('auth');
+Route::get('/manageusers/edit/{id}',[ManageUsersController::class, 'edit'])->name('manageusers.edit')->middleware('auth');
+Route::put('/manageusers/update/{id}',[ManageUsersController::class, 'update'])->name('manageusers.update')->middleware('auth');
+Route::post('/manageusers/bulkdelete', [ManageUsersController::class, 'bulkdelete'])->name('manageusers.bulkdelete')->middleware('auth');
 
 //Auth Route
 Route::middleware('auth')->group(function () {
