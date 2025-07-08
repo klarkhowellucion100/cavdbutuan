@@ -90,6 +90,7 @@ class FarmMechanizationUserController extends Controller
         $pendingVisitationList = $pendingVisitationListQuery
             ->select('a.*', 'b.region_name as region', 'c.province_name as province', 'd.municipality_name as municipality', 'e.barangay_name as barangay')
             ->orderBy('a.visitation_schedule', 'desc')
+            ->orderBy('a.time_from', 'asc')
             ->paginate(10, ['*'], 'pendingVisitationList_page');
 
         return view('userviews.services.farmmechanization.pending.index', [
@@ -193,6 +194,7 @@ class FarmMechanizationUserController extends Controller
         $approvedVisitationList = $approvedVisitationListQuery
             ->select('a.*', 'b.region_name as region', 'c.province_name as province', 'd.municipality_name as municipality', 'e.barangay_name as barangay')
             ->orderBy('a.visitation_schedule', 'desc')
+            ->orderBy('a.time_from', 'asc')
             ->paginate(10, ['*'], 'approvedVisitationList_page');
 
         return view('userviews.services.farmmechanization.approved.index', [

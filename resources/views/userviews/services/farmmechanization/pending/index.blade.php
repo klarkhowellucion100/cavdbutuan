@@ -144,8 +144,13 @@
                                                 <td>
                                                     {{ $visitationList->transaction_number }}
                                                 </td>
-                                                <td>
+                                                <td style="font-weight:bold;">
                                                     {{ \Carbon\Carbon::parse($visitationList->visitation_schedule)->format('l, F j, Y') }}
+                                                    <span class="text-primary">
+                                                        {{ \Carbon\Carbon::createFromFormat('H:i:s', $visitationList->time_from)->format('h:i A') }}
+                                                        to
+                                                        {{ \Carbon\Carbon::createFromFormat('H:i:s', $visitationList->time_to)->format('h:i A') }}
+                                                    </span>
                                                 </td>
                                                 <td>
                                                     {{ \Carbon\Carbon::parse($visitationList->proposed_schedule)->format('l, F j, Y') }}
