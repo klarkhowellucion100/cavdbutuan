@@ -42,7 +42,7 @@ Route::get('/dashboard/services/farmmechanization', [FarmMechanizationDashboardC
     ->middleware(['auth', 'verified'])
     ->name('dashboard.farmmechanization');
 
-Route::post( '/dashboard/services/farmmechanization/search', [FarmMechanizationDashboardController::class, 'search'])
+Route::post('/dashboard/services/farmmechanization/search', [FarmMechanizationDashboardController::class, 'search'])
     ->name('dashboard.farmmechanization.search')
     ->middleware('auth');
 
@@ -50,6 +50,10 @@ Route::post( '/dashboard/services/farmmechanization/search', [FarmMechanizationD
 Route::get('/dashboard/services/castrationandspay', [CastrationAndSpayDashboardController::class, 'index'])
     ->middleware(['auth'])
     ->name('dashboard.castrationandspay');
+
+Route::post('/dashboard/services/castrationandspay/search', [CastrationAndSpayDashboardController::class, 'search'])
+    ->name('dashboard.castrationandspay.search')
+    ->middleware('auth');
 
 //Farm Mechanization Guest Route
 Route::get('/farmmechanization/create', [FarmMechanizationController::class, 'create'])->name('farmmechanization.create');

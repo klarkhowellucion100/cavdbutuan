@@ -10,7 +10,7 @@
                                 href="{{ route('dashboard.farmmechanization') }}">
                                 Farm Mechanization
                             </a>
-                            <a class="button btn button-icon btn-outline-primary" href="#">
+                            <a class="button btn button-icon btn-outline-primary" href="{{ route('dashboard.castrationandspay') }}">
                                 Castration and Spay
                             </a>
                         </div>
