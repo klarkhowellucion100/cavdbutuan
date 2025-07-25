@@ -211,7 +211,6 @@
                                     </svg>
                                 </i>
                                 <span class="ml-2">Dashboard</span>
-                                <p class="mb-0 w-10 badge badge-pill badge-primary">6</p>
                             </a>
                         </li>
                         <li class="px-3 pt-3 pb-2">
@@ -238,6 +237,10 @@
                                     </svg>
                                 </i>
                                 <span class="ml-2">Farm Mechanization</span>
+                                @if ($pendingFarmMechanizationRequestsBoot > 0)
+                                    <p class="mb-0 w-10 badge badge-pill badge-danger">
+                                        {{ $pendingFarmMechanizationRequestsBoot }}</p>
+                                @endif
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active"
                                     width="15" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -295,6 +298,10 @@
                                             </svg>
                                         </i>
                                         <span class="">Appointments</span>
+                                        @if ($pendingFarmMechanizationRequestsBoot > 0)
+                                            <p class="mb-0 w-10 badge badge-pill badge-danger">
+                                                {{ $pendingFarmMechanizationRequestsBoot }}</p>
+                                        @endif
                                     </a>
                                 </li>
                             </ul>
@@ -316,6 +323,10 @@
                                     </svg>
                                 </i>
                                 <span class="ml-2">Castration and Spay</span>
+                                @if ($pendingCastrationAndSpayRequestsBoot > 0)
+                                    <p class="mb-0 w-10 badge badge-pill badge-danger">
+                                        {{ $pendingCastrationAndSpayRequestsBoot }}</p>
+                                @endif
                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active"
                                     width="15" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -372,6 +383,10 @@
                                             </svg>
                                         </i>
                                         <span class="">Appointments</span>
+                                        @if ($pendingCastrationAndSpayRequestsBoot > 0)
+                                            <p class="mb-0 w-10 badge badge-pill badge-danger">
+                                                {{ $pendingCastrationAndSpayRequestsBoot }}</p>
+                                        @endif
                                     </a>
                                 </li>
                             </ul>
