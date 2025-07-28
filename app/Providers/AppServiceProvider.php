@@ -31,9 +31,12 @@ class AppServiceProvider extends ServiceProvider
 
                 $pendingCastrationAndSpayRequestsBoot = DB::table('castration_and_spays')->where('request_status', 0)->count();
 
+                $pendingContactUsBoot = DB::table('contact_us')->where('email_status', 0)->count();
+
                 $view->with([
                     'pendingFarmMechanizationRequestsBoot' => $pendingFarmMechanizationRequestsBoot,
                     'pendingCastrationAndSpayRequestsBoot' => $pendingCastrationAndSpayRequestsBoot,
+                    'pendingContactUsBoot' => $pendingContactUsBoot
                 ]);
             }
         });
