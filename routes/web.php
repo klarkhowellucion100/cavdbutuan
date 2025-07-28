@@ -19,6 +19,7 @@ use App\Http\Controllers\FarmMechanizationDashboardController;
 use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
+use App\Http\Controllers\ContactUsReplyController;
 use App\Http\Controllers\FarmMechanizationAvailabilityController;
 
 //Welcome Blade
@@ -34,7 +35,15 @@ Route::get('/', function () {
 });
 
 //Contact Us Route
+
+//Contact Us Guest Views
 Route::post('/contactus/store', [ContactUsController::class, 'store'])->name('contactus.store');
+
+//Contact Us
+Route::get('/contactus/index',[ContactUsController::class, 'index'])->name('contactus.userviews.index')->middleware('auth');
+Route::get('/contactus/reply/{id}',[ContactUsController::class, 'reply'])->name('contactus.userviews.reply')->middleware('auth');
+Route::post('/contactus/{id}/sendreply', [ContactUsReplyController::class, 'sendreply'])->name('contact.userviews.sendreply')->middleware('auth');
+
 
 //Dashboard Routes
 //Dashboard Farm Mechanization

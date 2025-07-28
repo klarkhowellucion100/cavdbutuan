@@ -185,7 +185,9 @@
                                             <li><a href="{{ route('register') }}">Register</a></li>
                                         </ul>
                                     </li>
-
+                                    @auth
+                                        <li><a href="{{ route('dashboard.farmmechanization') }}" class="bg-primary text-white fw-bold">Dashboard</a></li>
+                                    @endauth
                                 </ul>
                             </nav>
                         </div>
