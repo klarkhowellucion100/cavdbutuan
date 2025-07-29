@@ -4,12 +4,14 @@ use App\Models\News;
 use App\Models\Banner;
 use App\Models\FarmMechanization;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UpdateProfileController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\NewsGuestController;
 use App\Http\Controllers\ManageUsersController;
+use App\Http\Controllers\ContactUsReplyController;
 use App\Http\Controllers\CastrationAndSpayController;
 use App\Http\Controllers\FarmMechanizationController;
 use App\Http\Controllers\CastrationAndSpayUserController;
@@ -19,7 +21,6 @@ use App\Http\Controllers\FarmMechanizationDashboardController;
 use App\Http\Controllers\CastrationAndSpayBlockDatesController;
 use App\Http\Controllers\FarmMechanizationBlockDatesController;
 use App\Http\Controllers\CastrationAndSpayAvailabilityController;
-use App\Http\Controllers\ContactUsReplyController;
 use App\Http\Controllers\FarmMechanizationAvailabilityController;
 
 //Welcome Blade
@@ -35,14 +36,18 @@ Route::get('/', function () {
 });
 
 //Contact Us Route
-
 //Contact Us Guest Views
 Route::post('/contactus/store', [ContactUsController::class, 'store'])->name('contactus.store');
 
-//Contact Us
+//Contact Us User Views
 Route::get('/contactus/index',[ContactUsController::class, 'index'])->name('contactus.userviews.index')->middleware('auth');
 Route::get('/contactus/reply/{id}',[ContactUsController::class, 'reply'])->name('contactus.userviews.reply')->middleware('auth');
 Route::post('/contactus/{id}/sendreply', [ContactUsReplyController::class, 'sendreply'])->name('contact.userviews.sendreply')->middleware('auth');
+
+//Profile
+//Edit Profile
+Route::get('/profile/edit/{id}', [UpdateProfileController::class,'edit'])->name('editprofile.userviews.edit')->middleware('auth');
+Route::put('/profile/update/{id}', [UpdateProfileController::class,'update'])->name('editprofile.userviews.update')->middleware('auth');
 
 
 //Dashboard Routes
